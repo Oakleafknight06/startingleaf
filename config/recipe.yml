@@ -27,13 +27,15 @@ modules:
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+    optfix:
+      - Mullvad VPN
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
       - justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
                   # in your custom.just (added by default) or local justfile
-      - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
+      # - nix-installer # shell shortcuts for determinate system's nix installers
       # - ublue-update # https://github.com/ublue-os/ublue-update
       # - 1password # install 1Password (stable) and `op` CLI tool
       # - dconf-update-service # a service unit that updates the dconf db on boot
@@ -50,7 +52,16 @@ modules:
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
 
+  - type: fonts
+
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      # installs mullvad vpn client. copied from gerblesh/usway
+      - install-mullvad.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - mullvad-daemon
