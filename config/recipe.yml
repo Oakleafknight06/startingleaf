@@ -56,7 +56,7 @@ modules:
     fonts:
       nerd-fonts:
         - FiraCode
-        - IntOneMono
+        - IntoneMono
         - JetBrainsMono
       google-fonts:
         - Roboto
