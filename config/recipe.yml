@@ -53,6 +53,13 @@ modules:
       # - Krita: org.kde.krita
 
   - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - IntOneMono
+        - JetBrainsMono
+      google-fonts:
+        - Roboto
 
   - type: script
     scripts:
