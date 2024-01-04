@@ -72,8 +72,9 @@ modules:
       - signing.sh
       # installs mullvad vpn client. copied from gerblesh/usway
       # - install-mullvad.sh
-
-- type: systemd
-      system:
-        enabled:
-          - mullvad-daemon
+  
+  - type: systemd
+        system:
+          enabled:
+            - mullvad-daemon
+  
