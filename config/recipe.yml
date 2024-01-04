@@ -23,6 +23,7 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
+      - https://repository.mullvad.net/rpm/stable/mullvad.repo
 
     install:
       - starship
@@ -30,8 +31,9 @@ modules:
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - mullvad-vpn
     optfix:
-      - Mullvad VPN
+      # - Mullvad VPN
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -69,9 +71,9 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       # installs mullvad vpn client. copied from gerblesh/usway
-      - install-mullvad.sh
+      # - install-mullvad.sh
 
-  - type: systemd
-    system:
-      enabled:
-        - mullvad-daemon
+        #  - type: systemd
+        #    system:
+        #      enabled:
+        #        - mullvad-daemon
