@@ -33,7 +33,6 @@ modules:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
     optfix:
-      # - Mullvad VPN
       - mullvad-vpn
 
   - type: bling # configure what to pull in from ublue-os/bling
@@ -74,7 +73,7 @@ modules:
       # installs mullvad vpn client. copied from gerblesh/usway
       # - install-mullvad.sh
 
-        #  - type: systemd
-        #    system:
-        #      enabled:
-        #        - mullvad-daemon
+- type: systemd
+      system:
+        enabled:
+          - mullvad-daemon
