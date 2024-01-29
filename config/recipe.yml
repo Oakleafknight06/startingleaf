@@ -40,7 +40,6 @@ modules:
         - dconf-update-service
 
   - type: yafti
-    custom-flatpaks:
 
   - type: fonts
     fonts:
