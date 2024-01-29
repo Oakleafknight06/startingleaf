@@ -39,9 +39,8 @@ modules:
     install:
         - dconf-update-service
 
-          # - type: yafti
-          # custom-flatpaks:
-          # - Celluloid: io.github.celluloid_player.Celluloid
+  - type: yafti
+    custom-flatpaks:
 
   - type: fonts
     fonts:
