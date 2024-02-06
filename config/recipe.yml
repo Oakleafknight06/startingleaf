@@ -59,6 +59,3 @@ modules:
     system:
       enabled:
         - mullvad-daemon
-  - type: akmods
-    install:
-        - v4l2loopback
