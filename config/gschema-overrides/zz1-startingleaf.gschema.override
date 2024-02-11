@@ -1,3 +1,6 @@
+[org.gnome.desktop.input-sources]
+xkb-options='caps:super,'compose:ralt'
+
 [org.gnome.desktop.wm.keybindings]
 close='<Alt><Super>q'
 cycle-windows='<Super>r'
