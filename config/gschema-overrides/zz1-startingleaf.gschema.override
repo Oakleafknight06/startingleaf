@@ -1,4 +1,4 @@
-[org/gnome/desktop/wm/keybindings]
+[org.gnome.desktop.wm.keybindings]
 close='<Alt><Super>q'
 cycle-windows='<Super>r'
 cycle-windows-backward='<Super><Shift>r'
@@ -6,13 +6,13 @@ minimize=''
 move-to-monitor-left='<Super>q'
 move-to-monitor-right='<Super>e'
 
-[org/gnome/shell/keybindings]
+[org.gnome.shell.keybindings]
 
 
-[org/gnome/mutter/keybindings]
+[org.gnome.mutter.keybindings]
 switch-monitor=''
 
-[org/gnome/shell/extensions/tiling-assistant]
+[org.gnome.shell.extensions.tiling-assistant]
 center-window='<Super>c'
 enable-advanced-experimental-features=true
 tile-bottom-half='<Alt><Super>j'
