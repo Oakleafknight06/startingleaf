@@ -37,7 +37,7 @@ modules:
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
-        - dconf-update-service
+      #- dconf-update-service
 
   - type: yafti
 
@@ -59,3 +59,6 @@ modules:
     system:
       enabled:
         - mullvad-daemon
+
+  - type: gschema-overrides
+    include: zz1-startingleaf.gschema.override # test & compile the override file included in config/gschema-overrides/zz1-myoverride.gschema.override
