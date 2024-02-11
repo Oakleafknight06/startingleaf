@@ -61,4 +61,5 @@ modules:
         - mullvad-daemon
 
   - type: gschema-overrides
-    include: zz1-startingleaf.gschema.override # test & compile the override file included in config/gschema-overrides/zz1-myoverride.gschema.override
+    include:
+      - zz1-startingleaf.gschema.override # test & compile the override file included in config/gschema-overrides/zz1-myoverride.gschema.override
