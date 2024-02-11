@@ -2,28 +2,25 @@
 xkb-options=['caps:super,'compose:ralt']
 
 [org.gnome.desktop.wm.keybindings]
-close='<Alt><Super>q'
-cycle-windows='<Super>r'
-cycle-windows-backward='<Super><Shift>r'
-minimize=''
-move-to-monitor-left='<Super>q'
-move-to-monitor-right='<Super>e'
-
-[org.gnome.shell.keybindings]
-
+close=['<Alt><Super>q']
+cycle-windows=['<Super>r']
+cycle-windows-backward=['<Super><Shift>r']
+minimize=['']
+move-to-monitor-left=['<Super>q']
+move-to-monitor-right=['<Super>e']
 
 [org.gnome.mutter.keybindings]
-switch-monitor=''
+switch-monitor=['']
 
 [org.gnome.shell.extensions.tiling-assistant]
-center-window='<Super>c'
+center-window=['<Super>c']
 enable-advanced-experimental-features=true
-tile-bottom-half='<Alt><Super>j'
-tile-bottomleft-quarter='<Alt><Super>u'
-tile-bottomright-quarter='<Alt><Super>p'
-tile-left-half='<Alt><Super>h'
-tile-maximize='<Alt><Super>g'
-tile-right-half='<Alt><Super>l'
-tile-topleft-quarter='<Alt><Super>i'
-tile-topright-quarter='<Alt><Super>o'
+tile-bottom-half=['<Alt><Super>j']
+tile-bottomleft-quarter=['<Alt><Super>u']
+tile-bottomright-quarter=['<Alt><Super>p']
+tile-left-half=['<Alt><Super>h']
+tile-maximize=['<Alt><Super>g']
+tile-right-half=['<Alt><Super>l']
+tile-topleft-quarter=['<Alt><Super>i']
+tile-topright-quarter=['<Alt><Super>o']
 
