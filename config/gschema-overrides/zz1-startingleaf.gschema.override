@@ -15,6 +15,8 @@ switch-to-workspace-right=['<Super>o']
 switch-monitor=['']
 [org.gnome.mutter.wayland.keybindings]
 restore-shortcuts=['']
+[org.gnome.mutter]
+workspaces-only-on-primary=false
 
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Super>t'
@@ -42,7 +44,6 @@ tile-topright-quarter=['<Alt><Super>o']
 [org.gnome.desktop.interface]
 color-scheme='prefer-dark'
 enable-hot-corners=false
-workspaces-only-on-primary=false
 
 [org.gnome.tweaks]
 show-extensions-notice=false
