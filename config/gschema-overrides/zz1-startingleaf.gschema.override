@@ -6,7 +6,7 @@ close=['<Alt><Super>q']
 cycle-windows=['<Super>r']
 cycle-windows-backward=['<Super><Shift>r']
 minimize=['']
-move-to-monitor-left=['<Alt><Super>q']
+move-to-monitor-left=['<Alt><Super>w']
 move-to-monitor-right=['<Alt><Super>e']
 switch-to-workspace-left=['<Super>i']
 switch-to-workspace-right=['<Super>o']
@@ -16,10 +16,16 @@ switch-monitor=['']
 [org.gnome.mutter.wayland.keybindings]
 restore-shortcuts=['']
 
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
+binding='<Super>t'
+command='flatpak run com.raggesilver.BlackBox'
+name='Launch Terminal'
+
 [org.gnome.settings-daemon.plugins.media-keys]
 home=['<Super>f']
 www=['<Super>b']
 screensaver=['<Alt><Super>Escape']
+custom-keybindings=['org.gnome.settings-daemon.plugins.media-keys.custom.keybindings.custom0']
 
 [org.gnome.shell.extensions.tiling-assistant]
 center-window=['<Super>c']
@@ -32,3 +38,16 @@ tile-maximize=['<Alt><Super>g']
 tile-right-half=['<Alt><Super>l']
 tile-topleft-quarter=['<Alt><Super>i']
 tile-topright-quarter=['<Alt><Super>o']
+
+[org.gnome.desktop.interface]
+color-scheme='prefer-dark'
+enable-hot-corners=false
+workspaces-only-on-primary=false
+
+[org.gnome.tweaks]
+show-extensions-notice=false
+
+[org.gnome.desktop.interface]
+icon-theme='MoreWaita'
+gtk-theme='adw-gtk3.dark'
+monospace-font-name='IntoneMono Nerd Font Mono 10'
