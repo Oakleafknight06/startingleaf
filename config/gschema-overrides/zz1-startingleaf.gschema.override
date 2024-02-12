@@ -18,16 +18,16 @@ restore-shortcuts=['']
 [org.gnome.mutter]
 workspaces-only-on-primary=false
 
-[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
-binding='<Super>t'
-command='flatpak run com.raggesilver.BlackBox'
-name='Launch Terminal'
-
 [org.gnome.settings-daemon.plugins.media-keys]
 home=['<Super>f']
 www=['<Super>b']
 screensaver=['<Alt><Super>Escape']
 custom-keybindings=['org.gnome.settings-daemon.plugins.media-keys.custom.keybindings.custom0']
+
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
+binding='<Super>t'
+command='flatpak run com.raggesilver.BlackBox'
+name='Launch Terminal'
 
 [org.gnome.shell.extensions.tiling-assistant]
 center-window=['<Super>c']
