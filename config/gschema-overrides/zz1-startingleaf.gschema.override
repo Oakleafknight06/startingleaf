@@ -11,9 +11,8 @@ move-to-monitor-right=['<Alt><Super>e']
 switch-to-workspace-left=['<Super>i']
 switch-to-workspace-right=['<Super>o']
 
-[org.gnome.mutter.keybindings]
-switch-monitor=['']
-restore-shortcuts=['']
+org.gnome.mutter.keybindings.switch-monitor=['']
+org.gnome.mutter.wayland.keybindings.restore-shortcuts=['']
 
 [org.gnome.settings-daemon.plugins.media-keys]
 home=['<Super>f']
