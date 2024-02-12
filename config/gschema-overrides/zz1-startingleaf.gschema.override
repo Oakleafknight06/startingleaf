@@ -19,7 +19,7 @@ restore-shortcuts=['']
 [org.gnome.settings-daemon.plugins.media-keys]
 home=['<Super>f']
 www=['<Super>b']
-screensaver=['<Alt><Super>Escape]
+screensaver=['<Alt><Super>Escape']
 
 [org.gnome.shell.extensions.tiling-assistant]
 center-window=['<Super>c']
