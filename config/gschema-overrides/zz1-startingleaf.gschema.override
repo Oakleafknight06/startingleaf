@@ -45,5 +45,5 @@ show-extensions-notice=false
 
 [org.gnome.desktop.interface]
 icon-theme='MoreWaita'
-gtk-theme='adw-gtk3.dark'
+gtk-theme='adw-gtk3-dark'
 monospace-font-name='IntoneMono Nerd Font Mono 10'
