@@ -38,15 +38,15 @@ modules:
     optfix:
       - Mullvad VPN # This is the directory being fixed, not the package name
 
- - type: default-flatpaks
-   notify: true
-   system:
-     install:
-       - org.mozilla.Firefox
-       - org.gnome.TextEditor
-       - com.raggesilver.BlackBox
+  - type: default-flatpaks
+    notify: true
+    system:
+      install:
+        - org.mozilla.Firefox
+        - org.gnome.TextEditor
+        - com.raggesilver.BlackBox
 
- - type: fonts
+  - type: fonts
     fonts:
       nerd-fonts:
         - FiraCode
