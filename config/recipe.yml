@@ -25,11 +25,13 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - starship
       - showmethekey
       - mullvad-vpn
       - morewaita-icon-theme
+      - tailscale
       - adw-gtk3-theme
       - fish
     remove:
@@ -45,6 +47,7 @@ modules:
         - org.mozilla.Firefox
         - org.gnome.TextEditor
         - com.raggesilver.BlackBox
+        - org.gnome.World.PikaBackup
 
   - type: fonts
     fonts:
@@ -64,6 +67,7 @@ modules:
     system:
       enabled:
         - mullvad-daemon
+        - tailscaled
 
   - type: gschema-overrides
     include:
