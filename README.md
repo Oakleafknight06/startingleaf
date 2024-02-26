@@ -8,7 +8,7 @@ For more info, check out the [BlueBuild homepage](https://blue-build.org/) and t
 ## Vauge Changelist
 - Added Mullvad VPN
 - Added ShowMeTheKey
-- Other packages, check config/recipe.yml for a conplete list
+- Other packages, check config/recipe.yml for a complete list
 - Installed several fonts
 
 ## Installation
