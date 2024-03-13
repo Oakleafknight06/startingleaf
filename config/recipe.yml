@@ -30,7 +30,7 @@ modules:
     install:
       - starship
       - showmethekey
-      - mullvad-vpn
+        # - mullvad-vpn
       - morewaita-icon-theme
       - tailscale
       - nautilus-open-any-terminal
