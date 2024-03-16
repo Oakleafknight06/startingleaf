@@ -41,7 +41,7 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - gnome-system-monitor
     optfix:
-      - Mullvad\ VPN # This is the directory being fixed, not the package name
+      - Mullvad VPN # This is the directory being fixed, not the package name
 
   - type: default-flatpaks
     notify: true
