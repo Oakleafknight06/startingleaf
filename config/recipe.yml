@@ -48,6 +48,7 @@ modules:
     system:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
+      repo-title: Flathub (system)
       install:
         - org.mozilla.Firefox
         - org.gnome.TextEditor
