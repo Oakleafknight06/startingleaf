@@ -40,6 +40,7 @@ modules:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - gnome-system-monitor
+      - gnome-tour
     optfix:
       - Mullvad VPN # This is the directory being fixed, not the package name
 
