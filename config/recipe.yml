@@ -59,6 +59,8 @@ modules:
         - io.missioncenter.MissionCenter
         - hu.kramo.Cartridges
         - org.prismlauncher.PrismLauncher
+
+  -type: default-flatpaks
     system:
       repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
       repo-name: gnome-nightly
