@@ -58,6 +58,11 @@ modules:
         - org.chromium.Chromium
         - io.missioncenter.MissionCenter
         - hu.kramo.Cartridges
+        - org.prismlauncher.PrismLauncher
+    system:
+      repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
+      repo-name: gnome-nightly
+      repo-title: Gnome Nightly (System)
 
   - type: fonts
     fonts:
