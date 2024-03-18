@@ -54,6 +54,7 @@ modules:
         - org.gnome.TextEditor
         - com.raggesilver.BlackBox
         - org.gnome.World.PikaBackup
+        - org.chromium.Chromium
 
   - type: fonts
     fonts:
