@@ -50,7 +50,7 @@ modules:
       repo-name: flathub
       repo-title: Flathub (system)
       install:
-        - org.mozilla.Firefox
+        - org.mozilla.firefox
         - org.gnome.TextEditor
         - com.raggesilver.BlackBox
         - org.gnome.World.PikaBackup
