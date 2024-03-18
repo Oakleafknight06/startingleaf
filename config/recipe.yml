@@ -55,7 +55,7 @@ modules:
         - com.raggesilver.BlackBox
         - org.gnome.World.PikaBackup
         - org.chromium.Chromium
-        - io.missioncenter.MissonCenter
+        - io.missioncenter.MissionCenter
 
   - type: fonts
     fonts:
