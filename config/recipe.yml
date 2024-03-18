@@ -57,6 +57,7 @@ modules:
         - org.gnome.World.PikaBackup
         - org.chromium.Chromium
         - io.missioncenter.MissionCenter
+        - hu.kramo.Cartridges
 
   - type: fonts
     fonts:
