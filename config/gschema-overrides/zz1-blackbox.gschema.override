@@ -1,0 +1,13 @@
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super><Alt>t'
+command='flatpak run com.raggesilver.BlackBox'
+name='Launch BlackBox'
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[com/github/stunkymonkey/nautilus-open-any-terminal]
+terminal='blackbox'
+keybindings=''
+new-tab=false
+flatpak='system'
