@@ -11,6 +11,9 @@ move-to-monitor-right=['<Alt><Super>e']
 switch-to-workspace-left=['<Super>i']
 switch-to-workspace-right=['<Super>o']
 
+[org.gnome.mutter]
+workspaces-only-on-primary=true
+
 [org.gnome.mutter.keybindings]
 switch-monitor=['']
 [org.gnome.mutter.wayland.keybindings]
@@ -38,7 +41,6 @@ icon-theme='MoreWaita'
 gtk-theme='adw-gtk3-dark'
 monospace-font-name='IntoneMono Nerd Font Mono 10'
 
-# Nautilus Tweaks
 [org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
 [org.gnome.nautilus.list-view]
