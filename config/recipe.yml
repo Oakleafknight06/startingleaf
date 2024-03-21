@@ -86,3 +86,6 @@ modules:
   - type: gschema-overrides
     include:
       - zz1-startingleaf.gschema.override # test & compile the override file included in config/gschema-overrides/zz1-myoverride.gschema.override
+      - zz1-startingleaf-folders.gschema.override
+      - zz1-blackbox.gschema.override
+      - zz1-tilingassistant.gschema.override
