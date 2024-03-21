@@ -12,7 +12,7 @@ switch-to-workspace-left=['<Super>i']
 switch-to-workspace-right=['<Super>o']
 
 [org.gnome.mutter]
-workspaces-only-on-primary=true
+workspaces-only-on-primary=false
 
 [org.gnome.mutter.keybindings]
 switch-monitor=['']
@@ -28,6 +28,11 @@ screensaver=['<Alt><Super>Escape']
 
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type='nothing'
+
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
+binding='<Super><Alt>t'
+command='flatpak run com.raggesilver.BlackBox'
+name='Launch Terminal'
 
 [org.gnome.desktop.interface]
 color-scheme='prefer-dark'
