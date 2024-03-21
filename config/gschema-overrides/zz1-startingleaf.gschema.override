@@ -48,16 +48,4 @@ click-policy='single'
 
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'com.raggesilver.BlackBox.desktop', 'org.gnome.TextEditor.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.World.PikaBackup']
-
-# Extension settings do not work right now. Will fix later
-[org.gnome.shell.extensions.tiling-assistant]
-center-window=['<Super>c']
-enable-advanced-experimental-features=true
-tile-bottom-half=['<Alt><Super>j']
-tile-bottomleft-quarter=['<Alt><Super>u']
-tile-bottomright-quarter=['<Alt><Super>p']
-tile-left-half=['<Alt><Super>h']
-tile-maximize=['<Alt><Super>g']
-tile-right-half=['<Alt><Super>l']
-tile-topleft-quarter=['<Alt><Super>i']
-tile-topright-quarter=['<Alt><Super>o']
+enabled-extensions = ['background-logo@fedorahosted.org', 'tiling-assistant@leleat-on-github', 'mullvadindicator@pobega.github.com']
