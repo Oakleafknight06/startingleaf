@@ -58,7 +58,8 @@ modules:
         - org.chromium.Chromium
         - io.missioncenter.MissionCenter
         - hu.kramo.Cartridges
-        - org.prismlauncher.PrismLauncher
+        - org.prismlauncher.prismlauncher
+        - com.mattjakeman.ExtensionManager
 
           #- type: default-flatpaks
           #system:
