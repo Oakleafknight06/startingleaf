@@ -1,2 +1,0 @@
-#!/bin/bash
-brew install bat bottom chezmoi gh lsd ncspot fastfetch neovim starship cbonsai vifm pfetch xdg-ninjaonefetch cpufetch
