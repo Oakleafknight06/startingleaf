@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+brew "bottom"
+brew "cbonsai"
+brew "chezmoi"
+brew "fastfetch"
+brew "gh"
+brew "lsd"
+brew "onefetch"
+brew "vifm"
+brew "xdg-ninja"
+brew "zoxide"
+brew "hugo"
+
