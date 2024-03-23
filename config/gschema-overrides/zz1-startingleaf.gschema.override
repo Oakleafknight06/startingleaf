@@ -11,6 +11,7 @@ move-to-monitor-right=['<Alt><Super>e']
 switch-to-workspace-left=['<Super>i']
 switch-to-workspace-right=['<Super>o']
 
+# Doesn't work
 [org.gnome.mutter]
 workspaces-only-on-primary=false
 
@@ -29,6 +30,7 @@ screensaver=['<Alt><Super>Escape']
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type='nothing'
 
+# Also doesn't work
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Super><Alt>t'
 command='flatpak run com.raggesilver.BlackBox'
