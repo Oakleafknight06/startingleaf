@@ -38,6 +38,7 @@ modules:
       - fish
       - waydroid
       - gnome-console
+      - sg3_utils # Enables Apple SuperDrive udev rule
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
