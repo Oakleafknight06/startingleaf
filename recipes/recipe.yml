@@ -89,6 +89,11 @@ modules:
         - mullvad-daemon
         - tailscaled
 
+  - type: gnome-extensions
+  install:
+    - tiling-assistantleleat-on-github.v47
+    - mullvadindicatorpobega.github.com.v19
+
   - type: gschema-overrides
     include:
       - zz1-startingleaf.gschema.override # test & compile the override file included in config/gschema-overrides/zz1-myoverride.gschema.override
