@@ -90,9 +90,9 @@ modules:
         - tailscaled
 
   - type: gnome-extensions
-  install:
-    - tiling-assistantleleat-on-github.v47
-    - mullvadindicatorpobega.github.com.v19
+    install:
+      - tiling-assistantleleat-on-github.v47
+      - mullvadindicatorpobega.github.com.v19
 
   - type: gschema-overrides
     include:
