@@ -36,7 +36,7 @@ modules:
       - nautilus-open-any-terminal
       - adw-gtk3-theme
       - fish
-      - waydroid
+      # - waydroid -- removed due to needing more workarounds to make it work properly. May re-add later.
       - gnome-console
       - sg3_utils # Enables Apple SuperDrive udev rule
     remove:
