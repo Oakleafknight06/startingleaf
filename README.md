@@ -8,6 +8,7 @@ For more info, check out the [BlueBuild homepage](https://blue-build.org/) and t
 ## Vauge Changelist
 - Added Mullvad VPN
 - Added ShowMeTheKey
+- Apple SuperDrive udev rule (requires sg3_utils package as well as the rule)
 - Other packages, check config/recipe.yml for a complete list
 - Installed several fonts
 
