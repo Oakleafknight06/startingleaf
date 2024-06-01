@@ -1,0 +1,12 @@
+# image will be published to ghcr.io/<user>/<name>
+name: kartingleaf
+# description will be included in the image's metadata
+description: Custom operating system image based on BlueBuild and Fedora Atomic Desktop. 
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 40 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common-modules.yml

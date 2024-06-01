@@ -22,11 +22,13 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe.yml
+          - recipe-gnome.yml
+          - recipe-kde.yml
+          - recipe-sway.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
-        uses: blue-build/github-action@v1.5.0
+        uses: blue-build/github-action@v1.4.0
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
