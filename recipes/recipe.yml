@@ -49,6 +49,14 @@ modules:
     optfix:
       - Mullvad VPN # This is the directory being fixed, not the package name
 
+  - type: systemd
+    system:
+      enabled:
+        - mullvad-daemon
+        - tailscaled
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+ 
   - type: default-flatpaks
     notify: true
     system:
@@ -60,17 +68,7 @@ modules:
         - org.gnome.TextEditor
         - com.raggesilver.BlackBox
         - org.gnome.World.PikaBackup
-        - org.chromium.Chromium
-        - io.missioncenter.MissionCenter
-        - hu.kramo.Cartridges
-        - org.prismlauncher.prismlauncher
         - com.mattjakeman.ExtensionManager
-
-          #- type: default-flatpaks
-          #system:
-          #repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
-          #repo-name: gnome-nightly
-          #repo-title: Gnome Nightly (System)
 
   - type: fonts
     fonts:
@@ -80,14 +78,6 @@ modules:
         - JetBrainsMono
       google-fonts:
         - Roboto
-
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
- 
-  - type: systemd
-    system:
-      enabled:
-        - mullvad-daemon
-        - tailscaled
 
   - type: gnome-extensions
     install:
@@ -100,3 +90,6 @@ modules:
       - zz1-startingleaf-folders.gschema.override
       - zz1-blackbox.gschema.override
       - zz1-tilingassistant.gschema.override
+
+  - type: chezmoi
+    repository: "htttps://github.com/oakleafknight06/dotfiles"
