@@ -5,17 +5,20 @@ _Atomic Desktop built on Fedora and Universal Blue with BlueBuild_
 
 For more info, check out the [BlueBuild homepage](https://blue-build.org/) and the [uBlue homepage](https://universal-blue.org/)
 
-## Vauge Changelist
+## Changelist (probably incomplete)
 - Added Mullvad VPN
 - Added ShowMeTheKey
-- Apple SuperDrive udev rule (requires sg3_utils package as well as the rule)
-- Other packages, check config/recipe.yml for a complete list
-- Installed several fonts
+- Apple SuperDrive udev rule (requires sg3_utils package)
+- Gnome, KDE, and Sway images
+- IntelOneMono NF, JetBrainsMonoNF, and Roboto installed
+- Dotfiles slipped in with Chezmoi
+- Brew for cli apps (coming soon)
+- Various tweaks for Gnome on the Gnome image
 
 ## Installation
 
 > **Warning**
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while! This is my personal image, which I manage for myself. You may copy from or use this repo, but I will offer **no** support or guarantee of function.
+> This is my personal image, which I manage for myself. You may copy from or use this repo, but I will offer **no** support or guarantee of functionality.
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
@@ -41,5 +44,8 @@ This repository builds date tags as well, so if you want to rebase to a particul
 ```
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:20230403
 ```
+
+KDE image is `kartingleaf` and sway image is `swayingleaf`
+yes, I know, very creative names 
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
