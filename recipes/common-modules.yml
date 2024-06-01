@@ -30,21 +30,12 @@ modules:
       - starship
       - showmethekey
       - mullvad-vpn
-      - morewaita-icon-theme
       - tailscale
-      - nautilus-open-any-terminal
-      - adw-gtk3-theme
       - fish
-      # - waydroid -- removed due to needing more workarounds to make it work properly. May re-add later.
-      - gnome-console
       - sg3_utils # Enables Apple SuperDrive udev rule
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - gnome-system-monitor
-      - gnome-tour
-      - gnome-terminal
-      - gnome-terminal-nautilus # removed to prevent dependency problems
     optfix:
       - Mullvad VPN # This is the directory being fixed, not the package name
 
