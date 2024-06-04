@@ -15,9 +15,6 @@ modules:
   
   - type: chezmoi
     repository: "htttps://github.com/oakleafknight06/dotfiles"
-    
-  - type: brew
-    # All other options are optional. No declarative package management avaliable.
 
   - type: rpm-ostree
     repos:
@@ -39,7 +36,9 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
     optfix:
       - Mullvad VPN # This is the directory being fixed, not the package name
-
+  
+  - type: brew # Installs brew. Omitting optional configuration.
+ 
   - type: systemd
     system:
       enabled:
