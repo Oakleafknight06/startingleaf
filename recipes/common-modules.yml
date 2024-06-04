@@ -16,7 +16,7 @@ modules:
   - type: chezmoi
     repository: "htttps://github.com/oakleafknight06/dotfiles"
     
-      #- type: brew
+  - type: brew
     # All other options are optional. No declarative package management avaliable.
 
   - type: rpm-ostree
