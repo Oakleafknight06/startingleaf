@@ -22,6 +22,7 @@ modules:
       - tailscale
       - fish
       - sg3_utils # Enables Apple SuperDrive udev rule
+      - glibc-devel
       # - gcc # Needed for brew
     remove:
       - firefox # default firefox removed in favor of flatpak
