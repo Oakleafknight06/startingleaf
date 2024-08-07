@@ -31,7 +31,7 @@ modules:
     # optfix:
       # - Mullvad VPN # This is the name of the directory being fixed, not the package name
   
-      #  - type: brew # Installs brew. Omitting optional configuration.
+  - type: brew # Installs brew. Omitting optional configuration.
  
   - type: systemd
     system:
