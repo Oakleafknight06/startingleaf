@@ -1,5 +1,5 @@
-# module configuration, executed in order
-# you can include multiple instances of the same module
+# Module configuration, executed in order
+# This file has modules common to both the Gnome and KDE images
 modules:
   - type: files
     files:
@@ -14,29 +14,21 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
-      # - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - showmethekey # Keyboard code viewer, doesn't work in container
-      # - mullvad-vpn
       - tailscale
-      - fish
+      - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
-      # - glibc-devel
-      # - gcc # Needed for brew
-      # - glibc
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-    # optfix:
-      # - Mullvad VPN # This is the name of the directory being fixed, not the package name
   
   - type: brew # Installs brew. Omitting optional configuration.
  
   - type: systemd
     system:
       enabled:
-        # - mullvad-daemon
         - tailscaled
  
   - type: default-flatpaks
