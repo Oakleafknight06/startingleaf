@@ -10,9 +10,9 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - from-file: common-modules.yml
-  
+
   - type: rpm-ostree
     repos:
-      - https://download.opensuse.org/repositories/home:paul4us/Fedora_40/home:paul4us.repo
+      - "https://download.opensuse.org/repositories/home:paul4us/Fedora_40/home:paul4us.repo"
     install:
       - klassy
