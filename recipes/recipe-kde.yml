@@ -13,6 +13,6 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - "https://download.opensuse.org/repositories/home:paul4us/Fedora_40/home:paul4us.repo"
+      # - "https://download.opensuse.org/repositories/home:paul4us/Fedora_40/home:paul4us.repo"
     install:
-      - klassy
+      # - klassy

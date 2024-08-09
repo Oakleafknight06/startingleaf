@@ -22,15 +22,15 @@ modules:
       - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
       # Below to enable Thinkpad X1 Yoga gen 1 / Carbon gen 4 fingerprint sensor
-      - open-fprintd
-      - fprintd-clients
-      - fprintd-clients-pam
-      - python3-validity
+      # - open-fprintd
+      # - fprintd-clients
+      # - fprintd-clients-pam
+      # - python3-validity
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - fprintd
-      - fprintd-pam
+      # - fprintd
+      # - fprintd-pam
   
   - type: brew # Installs brew. Omitting optional configuration.
  
