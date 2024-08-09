@@ -29,6 +29,8 @@ modules:
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - fprintd
+      - fprintd-pam
   
   - type: brew # Installs brew. Omitting optional configuration.
  
