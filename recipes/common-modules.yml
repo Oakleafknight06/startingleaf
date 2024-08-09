@@ -15,7 +15,7 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity
+      - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
     install:
       - showmethekey # Keyboard code viewer, doesn't work in container
       - tailscale
