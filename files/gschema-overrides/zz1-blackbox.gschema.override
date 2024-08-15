@@ -8,6 +8,4 @@ custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybin
 
 [com/github/stunkymonkey/nautilus-open-any-terminal]
 terminal='blackbox'
-keybindings=''
-new-tab=false
 flatpak='system'

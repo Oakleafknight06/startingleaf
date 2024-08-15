@@ -11,16 +11,13 @@ move-to-monitor-right=['<Alt><Super>e']
 switch-to-workspace-left=['<Super>i']
 switch-to-workspace-right=['<Super>o']
 
-# Doesn't work
-[org.gnome.mutter]
-workspaces-only-on-primary=false
-
 [org.gnome.mutter.keybindings]
 switch-monitor=['']
 [org.gnome.mutter.wayland.keybindings]
 restore-shortcuts=['']
 [org.gnome.mutter]
 workspaces-only-on-primary=false
+experimental-features=['scale-monitor-framebuffer']
 
 [org.gnome.settings-daemon.plugins.media-keys]
 home=['<Super>f']
@@ -30,12 +27,6 @@ screensaver=['<Alt><Super>Escape']
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type='nothing'
 
-# Also doesn't work
-[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
-binding='<Super><Alt>t'
-command='flatpak run com.raggesilver.BlackBox'
-name='Launch Terminal'
-
 [org.gnome.desktop.interface]
 color-scheme='prefer-dark'
 enable-hot-corners=false
@@ -43,11 +34,13 @@ enable-hot-corners=false
 [org.gnome.tweaks]
 show-extensions-notice=false
 
+# Themeing
 [org.gnome.desktop.interface]
 icon-theme='MoreWaita'
 gtk-theme='adw-gtk3-dark'
 monospace-font-name='IntoneMono Nerd Font Mono 10'
 
+# Nautilus Config
 [org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
 [org.gnome.nautilus.list-view]
@@ -55,6 +48,28 @@ use-tree-view=true
 [org.gnome.nautilus.preferences]
 click-policy='single'
 
+# Shell Search
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'com.raggesilver.BlackBox.desktop', 'org.gnome.TextEditor.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.World.PikaBackup']
 enabled-extensions = ['background-logo@fedorahosted.org', 'tiling-assistant@leleat-on-github', 'mullvadindicator@pobega.github.com']
+
+[org.gnome.desktop.search-providers]
+sort-order=['org.gnome.Settings.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calendar.desktop']
+enabled=['org.gnome.Contacts.desktop']
+
+# I/O on switches
+[org.gnome.desktop.a11y.interface]
+show-status-shapes=true
+
+# Launch BlackBox Custom Keybinding
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
+binding='<Super>t'
+command='flatpak run com.raggesilver.BlackBox'
+name='Launch BlackBox'
+  
+[org.gnome.settings-daemon.plugins.media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[com/github/stunkymonkey/nautilus-open-any-terminal]
+terminal='blackbox'
+flatpak='system'
