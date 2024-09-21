@@ -33,6 +33,10 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       # - fprintd
       # - fprintd-pam
+   
+  - type: script
+    scripts:
+      - install-widevine.sh
   
   - type: brew # Installs brew. Omitting optional configuration.
  
