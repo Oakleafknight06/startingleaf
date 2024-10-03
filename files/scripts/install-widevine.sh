@@ -13,4 +13,5 @@ unzip $LATEST-linux-x64.zip
 echo 'Making directory' && sudo mkdir /usr/lib/chromium
 echo 'Moving file' && sudo mv libwidevinecdm.so /usr/lib/chromium
 sudo chmod 644 /usr/lib/chromium/libwidevinecdm.so
+sudo chmod +x /usr/lib/chromium/libwidevinecdm.so
 echo 'Done!'
