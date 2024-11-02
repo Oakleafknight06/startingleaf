@@ -24,7 +24,7 @@ modules:
       - gnome-system-monitor
       - gnome-tour
       # - gnome-terminal
-      - gnome-terminal-nautilus # removed to prevent dependency problems
+      # - gnome-terminal-nautilus # removed to prevent dependency problems
 
   - type: gnome-extensions
     install:
