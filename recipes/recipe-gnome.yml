@@ -23,7 +23,7 @@ modules:
     remove:
       - gnome-system-monitor
       - gnome-tour
-      - gnome-terminal
+      # - gnome-terminal
       - gnome-terminal-nautilus # removed to prevent dependency problems
 
   - type: gnome-extensions
