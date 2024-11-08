@@ -16,13 +16,13 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/secureblue/hardened-chromium/repo/fedora-%OS_VERSION%/secureblue-hardened-chromium-fedora-%OS_VERSION%.repo
+      # - https://copr.fedorainfracloud.org/coprs/secureblue/hardened-chromium/repo/fedora-%OS_VERSION%/secureblue-hardened-chromium-fedora-%OS_VERSION%.repo
     install:
       - showmethekey # Keyboard code viewer, doesn't work in container
       - tailscale
       - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
-      - hardened-chromium
+      # - hardened-chromium
       # Below to enable Thinkpad X1 Yoga gen 1 / Carbon gen 4 fingerprint sensor
       # - open-fprintd
       # - fprintd-clients
@@ -36,7 +36,7 @@ modules:
    
   - type: script
     scripts:
-      - install-widevine.sh
+      # - install-widevine.sh
   
   - type: brew # Installs brew. Omitting optional configuration.
  

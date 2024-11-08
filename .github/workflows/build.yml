@@ -23,7 +23,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - recipe-gnome.yml
-          - recipe-kde.yml
+          # - recipe-kde.yml
           # - recipe-sway.yml
     steps:
        # the build is fully handled by the reusable github action
