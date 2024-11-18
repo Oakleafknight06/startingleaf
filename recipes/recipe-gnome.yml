@@ -21,8 +21,8 @@ modules:
       - adw-gtk3-theme
       - nautilus-open-any-terminal
       - gnome-console
-      - fcitx5
-      - fcitx5-chinese-addons
+      # - fcitx5
+      # - fcitx5-chinese-addons
     remove:
       - gnome-system-monitor
       # - gnome-tour
@@ -32,7 +32,7 @@ modules:
   - type: gnome-extensions
     install:
       - Tiling Assistant
-      - Input Method Panel
+      # - Input Method Panel
 
   - type: gschema-overrides # test & compile override files in config/gschema-overrides/
     include:
