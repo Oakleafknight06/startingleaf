@@ -21,6 +21,8 @@ modules:
       - adw-gtk3-theme
       - nautilus-open-any-terminal
       - gnome-console
+      - fcitx5
+      - fcitx5-chinese-addons
     remove:
       - gnome-system-monitor
       # - gnome-tour
