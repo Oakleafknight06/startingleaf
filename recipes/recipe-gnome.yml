@@ -21,22 +21,17 @@ modules:
       - adw-gtk3-theme
       - nautilus-open-any-terminal
       - gnome-console
-      # - fcitx5
-      # - fcitx5-chinese-addons
     remove:
       - gnome-system-monitor
-      # - gnome-tour
-      # - gnome-terminal
-      # - gnome-terminal-nautilus # removed to prevent dependency problems
 
   - type: gnome-extensions
     install:
-      - Tiling Assistant
-      # - Input Method Panel
+      # - Tiling Assistant
 
   - type: script
     scripts:
       - adwaita-colors.sh
+
   - type: gschema-overrides # test & compile override files in config/gschema-overrides/
     include:
       - zz1-startingleaf.gschema.override
