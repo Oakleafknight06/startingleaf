@@ -30,7 +30,7 @@ modules:
 
   - type: script
     scripts:
-      - adwaita-colors.sh
+      # - adwaita-colors.sh
 
   - type: gschema-overrides # test & compile override files in config/gschema-overrides/
     include:
