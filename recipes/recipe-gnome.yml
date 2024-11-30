@@ -10,7 +10,40 @@ image-version: 41 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: common-modules.yml
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  
+  - type: chezmoi
+    repository: "htttps://github.com/oakleafknight06/dotfiles"
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    install:
+      - showmethekey # Keyboard code viewer, doesn't work in container
+      - tailscale
+      - fish # Fish shell. Not set as login, executed with terminal emulator
+      - sg3_utils # Enables Apple SuperDrive udev rule
+
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled
+ 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - IntelOneMono
+        - JetBrainsMono
+      google-fonts:
+        - Roboto
+        - Inter
 
   - type: rpm-ostree
     repos:
@@ -28,15 +61,9 @@ modules:
     install:
       - Tiling Assistant
 
-  - type: script
-    scripts:
-      # - adwaita-colors.sh
-
   - type: gschema-overrides # test & compile override files in config/gschema-overrides/
     include:
       - zz1-startingleaf.gschema.override
-      - zz1-startingleaf-folders.gschema.override
+      # - zz1-startingleaf-folders.gschema.override
       # - zz1-blackbox.gschema.override
       - zz1-tilingassistant.gschema.override
-
-

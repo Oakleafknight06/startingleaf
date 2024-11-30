@@ -1,0 +1,13 @@
+- type: rpm-ostree
+  repos:
+    - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
+  install:
+      # Below to enable Thinkpad X1 Yoga gen 1 / Carbon gen 4 fingerprint sensor
+      - open-fprintd
+      - fprintd-clients
+      - fprintd-clients-pam
+      - python3-validity
+  remove:
+      - fprintd
+      - fprintd-pam
+ 
