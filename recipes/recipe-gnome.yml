@@ -56,6 +56,12 @@ modules:
       - gnome-console
     remove:
       - gnome-system-monitor
+      # Extensions
+      # - gnome-shell-extension-apps-menu
+      # - gnome-shell-extension-places-menu
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-window-list
 
   - type: gnome-extensions
     install:
