@@ -1,0 +1,75 @@
+# image will be published to ghcr.io/<user>/<name>
+name: startingleaf
+# description will be included in the image's metadata
+description: Custom operating system image based on Secureblue and Fedora Atomic Desktops, built with BlueBuild. 
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/secureblue/silverblue-main-hardened
+image-version: 41 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  
+  - type: chezmoi
+    repository: "htttps://github.com/oakleafknight06/dotfiles"
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    install:
+      - showmethekey # Keyboard code viewer, doesn't work in container
+      - tailscale
+      - fish # Fish shell. Not set as login, executed with terminal emulator
+      - sg3_utils # Enables Apple SuperDrive udev rule
+
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled
+ 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - IntelOneMono
+        - JetBrainsMono
+      google-fonts:
+        - Roboto
+        - Inter
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
+    install:
+      - morewaita-icon-theme
+      - adw-gtk3-theme
+      - nautilus-open-any-terminal
+      - gnome-console
+    remove:
+      - gnome-system-monitor
+      # Extensions
+      # - gnome-shell-extension-apps-menu
+      # - gnome-shell-extension-places-menu
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-window-list
+      - gnome-classic-session 
+
+  - type: gnome-extensions
+    install:
+      - Tiling Assistant
+
+  - type: gschema-overrides # test & compile override files in config/gschema-overrides/
+    include:
+      - zz1-startingleaf.gschema.override
+      # - zz1-startingleaf-folders.gschema.override
+      # - zz1-blackbox.gschema.override
+      - zz1-tilingassistant.gschema.override
