@@ -14,7 +14,7 @@ modules:
       - source: system
         destination: /
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: signing
   
   - type: chezmoi
     repository: "htttps://github.com/oakleafknight06/dotfiles"
@@ -23,11 +23,24 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
     install:
       - showmethekey # Keyboard code viewer, doesn't work in container
       - tailscale
       - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
+      - morewaita-icon-theme
+      - adw-gtk3-theme
+     remove:
+      - gnome-system-monitor
+      # Extensions
+      # - gnome-shell-extension-apps-menu
+      # - gnome-shell-extension-places-menu
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-window-list
+      - gnome-classic-session 
+      - gnome-software
 
   - type: systemd
     system:
@@ -43,27 +56,6 @@ modules:
       google-fonts:
         - Roboto
         - Inter
-
-  # Gnome specific stuff
-  - type: rpm-ostree
-    repos:
-      # - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
-    install:
-      - morewaita-icon-theme
-      - adw-gtk3-theme
-      # - nautilus-open-any-terminal
-      # - gnome-console
-    remove:
-      - gnome-system-monitor
-      # Extensions
-      # - gnome-shell-extension-apps-menu
-      # - gnome-shell-extension-places-menu
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-background-logo
-      - gnome-shell-extension-window-list
-      - gnome-classic-session 
-      - gnome-software
 
   - type: gnome-extensions
     install:
