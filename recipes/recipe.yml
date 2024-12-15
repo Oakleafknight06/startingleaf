@@ -31,7 +31,7 @@ modules:
       - sg3_utils # Enables Apple SuperDrive udev rule
       - morewaita-icon-theme
       - adw-gtk3-theme
-     remove:
+    remove:
       - gnome-system-monitor
       # Extensions
       # - gnome-shell-extension-apps-menu
