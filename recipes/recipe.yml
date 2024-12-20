@@ -4,7 +4,7 @@ name: startingleaf
 description: Custom operating system image based on Secureblue and Fedora Atomic Desktops, built with BlueBuild. 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-hardened
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -33,11 +33,7 @@ modules:
       - adw-gtk3-theme
     remove:
       - gnome-system-monitor
-      # Extensions
-      # - gnome-shell-extension-apps-menu
-      # - gnome-shell-extension-places-menu
       - gnome-shell-extension-launch-new-instance
-      # - gnome-shell-extension-background-logo
       - gnome-shell-extension-window-list
       - gnome-classic-session 
       - gnome-software
