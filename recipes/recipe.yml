@@ -36,7 +36,8 @@ modules:
       - gnome-shell-extension-launch-new-instance
       - gnome-shell-extension-window-list
       - gnome-classic-session 
-      #- gnome-tweaks
+      - gnome-tweaks
+      - gnome-software
 
   - type: systemd
     system:
