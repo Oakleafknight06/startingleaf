@@ -6,13 +6,13 @@ _Atomic Desktop built on Fedora Atomic Desktops and Secureblue with BlueBuild_
 For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://github.com/secureblue/secureblue)
 
 ## Changelist
-- Added ShowMeTheKey for keyboard testing
+- ShowMeTheKey layered for keyboard testing
 - Apple SuperDrive udev rule (requires sg3_utils package)
-- IntelOneMono NF, JetBrainsMonoNF, and Roboto installed
+- Intel One Mono and JetBrains Mono Nerd Fonts, Roboto Google font [todo: add Inter]
 - Dotfiles slipped in with Chezmoi
 - Brew for cli apps
-- Fish used as interacrive shell (set through terminal emulator settings)
-- Gnome configuration, including Tiling Assistant extension
+- Fish used as interactive shell (set through terminal emulator settings)
+- Gnome configuration, including keybinds for Tiling Assistant extension (some don't apply correctly)
 - Hardened Chromium from Secureblue as main browser   
 
 ## Installation
