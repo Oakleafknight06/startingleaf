@@ -1,19 +1,27 @@
 # Startingleaf
-_Atomic Desktop built on Fedora Atomic Desktops and Secureblue with BlueBuild_
+_Atomic Desktop built on Fedora and Secureblue with BlueBuild_
 
 [![bluebuild](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml/badge.svg)](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml)
 
-For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://github.com/secureblue/secureblue)
+For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://secureblue.dev) websites
 
 ## Changelist
 - ShowMeTheKey layered for keyboard testing
 - Apple SuperDrive udev rule (requires sg3_utils package)
-- Intel One Mono and JetBrains Mono Nerd Fonts, Roboto Google font [todo: add Inter]
+- Intel One Mono nerd font, JetBrains Mono nerd font; Roboto and Inter Google fonts installed
+- MoreWaita and Adw-gtk3 for consistent Gnome look
+- Tailscale installed
 - Dotfiles slipped in with Chezmoi
 - Brew for cli apps
-- Fish used as interactive shell (set through terminal emulator settings)
-- Gnome configuration, including keybinds for Tiling Assistant extension (some don't apply correctly)
-- Hardened Chromium from Secureblue as main browser   
+- Fish as interactive shell (set through terminal emulator settings)
+- Gnome configuration (Tiling Assistant added, gschema changed, some default apps and extensions removed.)
+- Trivalent browser (https://github.com/secureblue/trivalent)   
+- Distrobox templates (currently removed)
+### Experimental:
+*Incomplete/not added yet*
+- Better Chinese input with fcitx5 etc
+- Fingerprint reader support for Thinkpad X1 Yoga 1st gen
+- Figure out the best way to ship android-platform-tools
 
 ## Installation
 
