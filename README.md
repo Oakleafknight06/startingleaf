@@ -8,6 +8,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Changelist
 - ShowMeTheKey layered for keyboard testing
 - Apple SuperDrive udev rule (requires sg3_utils package)
+    - Rule from this [gist](https://gist.github.com/yookoala/818c1ff057e3d965980b7fd3bf8f77a6) by @yookoala
 - Intel One Mono nerd font, JetBrains Mono nerd font; Roboto and Inter Google fonts installed
 - MoreWaita and Adw-gtk3 for consistent Gnome look
 - Tailscale installed
