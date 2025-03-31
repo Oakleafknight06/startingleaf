@@ -1,0 +1,10 @@
+# image will be published to ghcr.io/<user>/<name>
+name: startingleaf
+# description will be included in the image's metadata
+description: Custom operating system image based on Secureblue and Fedora Atomic Desktops, built with BlueBuild. 
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/secureblue/silverblue-main-hardened
+image-version: latest
+# Import settings from other files
+modules:
+    - from-file: recipe.yml
