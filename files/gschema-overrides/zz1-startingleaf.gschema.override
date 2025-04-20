@@ -37,7 +37,6 @@ show-extensions-notice=false
 [org.gnome.desktop.interface]
 icon-theme='MoreWaita'
 gtk-theme='adw-gtk3-dark'
-monospace-font-name='IntoneMono Nerd Font Mono 10'
 gtk-enable-primary-paste=false
 show-battery-percentage=true
 color-scheme='prefer-dark'
