@@ -21,7 +21,7 @@ modules:
 
   # Installs chezmoi and (in theory) automatically imports dotfiles
   - type: chezmoi
-    repository: "htttps://github.com/oakleafknight06/dotfiles"
+    repository: "https://github.com/oakleafknight06/dotfiles"
 
   - type: rpm-ostree
     repos:
