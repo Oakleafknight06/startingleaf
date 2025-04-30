@@ -56,7 +56,7 @@ modules:
     install:
       - Tiling Assistant
 
-  - type: gschema-overrides # test & compile override files in config/gschema-overrides/
-    include:
-      #- zz1-startingleaf.gschema.override
-      #- zz1-tilingassistant.gschema.override
+  # - type: gschema-overrides # test & compile override files in config/gschema-overrides/
+  #  include:
+      # - zz1-startingleaf.gschema.override
+      # - zz1-tilingassistant.gschema.override
