@@ -46,7 +46,7 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - FiraCode
+        - AdwaitaMono
         - IntelOneMono
         - JetBrainsMono
       google-fonts:
@@ -58,5 +58,5 @@ modules:
 
   - type: gschema-overrides # test & compile override files in config/gschema-overrides/
     include:
-      - zz1-startingleaf.gschema.override
-      - zz1-tilingassistant.gschema.override
+      #- zz1-startingleaf.gschema.override
+      #- zz1-tilingassistant.gschema.override
