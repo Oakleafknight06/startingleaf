@@ -30,13 +30,13 @@ modules:
       - morewaita-icon-theme
       - adw-gtk3-theme
       - ibus-rime
-    remove:
-      - gnome-system-monitor
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-window-list
-      - gnome-classic-session 
-      - gnome-tweaks
-      - gnome-software
+    #remove:
+      #- gnome-system-monitor
+      #- gnome-shell-extension-launch-new-instance
+      #- gnome-shell-extension-window-list
+      #- gnome-classic-session 
+      #- gnome-tweaks
+      #- gnome-software
 
   - type: systemd
     system:
