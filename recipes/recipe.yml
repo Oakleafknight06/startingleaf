@@ -9,13 +9,17 @@
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+
+  # Copies files from the repo into the image
   - type: files
     files:
       - source: system
         destination: /
 
+  # Signs image with sigstore
   - type: signing
-  
+
+  # Installs chezmoi and (in theory) automatically imports dotfiles
   - type: chezmoi
     repository: "htttps://github.com/oakleafknight06/dotfiles"
 
@@ -27,16 +31,17 @@ modules:
       - tailscale
       - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
-      - morewaita-icon-theme
-      - adw-gtk3-theme
-      - ibus-rime
-    #remove:
-      #- gnome-system-monitor
-      #- gnome-shell-extension-launch-new-instance
-      #- gnome-shell-extension-window-list
-      #- gnome-classic-session 
-      #- gnome-tweaks
-      #- gnome-software
+      - morewaita-icon-theme # Icon theme that adds icons for additional mimetypes and folders, as well as adwaita-style icons for third-party apps.
+      - adw-gtk3-theme # Consistent styling for GTK3 apps
+      - ibus-rime # Better Chiense input
+    remove:
+      # Unneeded / legacy GNOME apps removed
+      - gnome-system-monitor
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-window-list
+      - gnome-classic-session 
+      - gnome-tweaks
+      - gnome-software
 
   - type: systemd
     system:
@@ -56,7 +61,7 @@ modules:
     install:
       - Tiling Assistant
 
-  # - type: gschema-overrides # test & compile override files in config/gschema-overrides/
-  #  include:
-      # - zz1-startingleaf.gschema.override
-      # - zz1-tilingassistant.gschema.override
+  - type: gschema-overrides # test & compile override files in config/gschema-overrides/
+    include:
+      - zz1-startingleaf.gschema.override
+      - zz1-tilingassistant.gschema.override
