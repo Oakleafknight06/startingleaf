@@ -5,24 +5,26 @@ _Atomic Desktop built on Fedora and Secureblue with BlueBuild_
 
 For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://secureblue.dev) websites
 
-## Changelist
-- ShowMeTheKey layered for keyboard testing
+## Feature List
 - Apple SuperDrive udev rule (requires sg3_utils package)
     - Rule from this [gist](https://gist.github.com/yookoala/818c1ff057e3d965980b7fd3bf8f77a6) by @yookoala
-- Intel One Mono nerd font, JetBrains Mono nerd font; Roboto and Inter Google fonts installed
+- Intel One Mono, Adwaita Mono, and JetBrains Mono nerd fonts plus Roboto Google font installed
 - MoreWaita and Adw-GTK3 for consistent Gnome look
 - Tailscale for easy networking
 - Mullvad VPN
 - Dotfiles slipped in with Chezmoi
-- Brew for cli apps
+- Brew for cli apps, with Brewfile in dotifles for semi-declarative management
 - Fish as interactive shell (set through terminal emulator settings)
-- Gnome configuration (Tiling Assistant added, gschema changed, some default apps and extensions removed.)
-- Trivalent browser (https://github.com/secureblue/trivalent)   
-- Distrobox templates (currently removed)
+- Gnome configuration through gschema rules
+    - Tiling Assistant extension
+    - Gnome-Classic session removed
+    - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
+- Trivalent browser (https://github.com/secureblue/trivalent)
 ### Experimental:
 *Incomplete/not added yet*
 - Better Chinese input with Rime
 - android-platform-tools
+- ShowMeTheKey layered for keyboard testing (Temporarily removed)
 
 ## Installation
 
@@ -49,7 +51,6 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
-
 ```
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:20230403
+rpm-ostree reb-ase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:20250403
 ```
