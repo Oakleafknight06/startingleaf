@@ -36,7 +36,7 @@ modules:
       - adw-gtk3-theme # Consistent styling for GTK3 apps
       - ibus-rime # Better Chiense input
       - mullvad-vpn # Circumvent network censorship
-      - mpd # Music Player Daemon - used with client for music player
+      # - mpd # Music Player Daemon - used with client for music player NOT IN FEDORA REPOS
     remove:
       # Unneeded / legacy GNOME apps removed
       - gnome-system-monitor
