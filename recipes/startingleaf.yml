@@ -29,13 +29,14 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/trixieua/morewaita-icon-theme/repo/fedora-%OS_VERSION%/trixieua-morewaita-icon-theme-fedora-%OS_VERSION%.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
     install:
-      - tailscale
+      - tailscale # Effortless networking - "Virtual LAN" wireguard service
       - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
       - morewaita-icon-theme # Icon theme that adds icons for additional mimetypes and folders, as well as adwaita-style icons for third-party apps.
       - adw-gtk3-theme # Consistent styling for GTK3 apps
       - ibus-rime # Better Chiense input
-      - mullvad-vpn
+      - mullvad-vpn # Circumvent network censorship
+      - mpd # Music Player Daemon - used with client for music player
     remove:
       # Unneeded / legacy GNOME apps removed
       - gnome-system-monitor
