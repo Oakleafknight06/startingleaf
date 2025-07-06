@@ -12,12 +12,7 @@ modules:
   - type: chezmoi
     repository: "https://github.com/oakleafknight06/dotfiles"
     
-   - type: systemd
-    system:
-      enabled:
-        - tailscaled
-        - mullvad-daemon
- 
+  # Installs fonts
   - type: fonts
     fonts:
       nerd-fonts:
@@ -37,3 +32,8 @@ modules:
       - ibus-rime # Better Chiense input
       - mullvad-vpn # Circumvent network censorship
 
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled
+        - mullvad-daemon
