@@ -1,12 +1,12 @@
   - type: fonts
     fonts:
-        nerd-fonts:
-          - AdwaitaMono
+      nerd-fonts:
+        - AdwaitaMono
         
   - type: gnome-extensions
     install:
      - Tiling Assistant
-      - Mullvad Indicator
+     - Mullvad Indicator
 
   - type: gschema-overrides # test & compile override files in config/gschema-overrides/
     include:
