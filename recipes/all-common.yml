@@ -1,3 +1,4 @@
+modules:
   # Copies files from the repo into the image
   - type: files
     files:

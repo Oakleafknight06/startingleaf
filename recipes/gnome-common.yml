@@ -1,29 +1,31 @@
-- type: fonts
-  fonts:
-    nerd-fonts:
-      - AdwaitaMono
+# Gnome Configuration and Tweaking
+modules:
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - AdwaitaMono
       
-- type: gnome-extensions
-  install:
-   - Tiling Assistant
-   - Mullvad Indicator
+  - type: gnome-extensions
+    install:
+     - Tiling Assistant
+     - Mullvad Indicator
 
-- type: gschema-overrides # test & compile override files in config/gschema-overrides/
-  include:
-    - zz1-startingleaf.gschema.override
-    - zz1-tilingassistant.gschema.override
+  - type: gschema-overrides # test & compile override files in config/gschema-overrides/
+    include:
+      - zz1-startingleaf.gschema.override
+      - zz1-tilingassistant.gschema.override
   
-- type: rpm-ostree
-  repos:
-    - https://copr.fedorainfracloud.org/coprs/trixieua/morewaita-icon-theme/repo/fedora-%OS_VERSION%/trixieua-morewaita-icon-theme-fedora-%OS_VERSION%.repo
-  install:
-    - morewaita-icon-theme # Icon theme that adds icons for additional mimetypes and folders, as well as adwaita-style icons for third-party apps.
-    - adw-gtk3-theme # Consistent styling for GTK3 apps
-  remove:
-    # Unneeded / legacy GNOME apps removed
-    - gnome-system-monitor
-    - gnome-shell-extension-launch-new-instance
-    - gnome-shell-extension-window-list
-    - gnome-classic-session 
-    - gnome-tweaks
-    - gnome-software
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/trixieua/morewaita-icon-theme/repo/fedora-%OS_VERSION%/trixieua-morewaita-icon-theme-fedora-%OS_VERSION%.repo
+    install:
+      - morewaita-icon-theme # Icon theme that adds icons for additional mimetypes and folders, as well as adwaita-style icons for third-party apps.
+      - adw-gtk3-theme # Consistent styling for GTK3 apps
+    remove:
+      # Unneeded / legacy GNOME apps removed
+      - gnome-system-monitor
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-window-list
+      - gnome-classic-session 
+      - gnome-tweaks
+      - gnome-software
