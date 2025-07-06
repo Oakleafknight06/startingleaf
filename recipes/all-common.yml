@@ -31,6 +31,7 @@ modules:
       - sg3_utils # Enables Apple SuperDrive udev rule
       - ibus-rime # Better Chiense input
       - mullvad-vpn # Circumvent network censorship
+      - android-tools
 
   - type: systemd
     system:
