@@ -27,7 +27,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Installation
 
 > [!Warning]
-> This is my personal image, which I manage for myself. You may copy from or use this repo, but I will provide **no** provision of support or guarantee of functionality.
+> This is my personal image, which I manage for myself. You may copy from or use this repo, but I provide **no** support or guarantee of functionality.
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
