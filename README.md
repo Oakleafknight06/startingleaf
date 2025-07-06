@@ -20,16 +20,14 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
     - Gnome-Classic session removed
     - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
 - Trivalent browser (https://github.com/secureblue/trivalent)
-### Experimental:
-*Incomplete/not added yet*
+- ADB and fastboot for Android
 - Better Chinese input with Rime
-- android-platform-tools
-- ShowMeTheKey layered for keyboard testing (Temporarily removed)
+
 
 ## Installation
 
 > [!Warning]
-> This is my personal image, which I manage for myself. You may copy from or use this repo, but there is **no** support or guarantee of functionality.
+> This is my personal image, which I manage for myself. You may copy from or use this repo, but I will provide **no** provision of support or guarantee of functionality.
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
