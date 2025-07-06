@@ -7,4 +7,5 @@ base-image: ghcr.io/secureblue/silverblue-nvidia-open-hardened
 image-version: latest
 # Import settings from other files
 modules:
-    - from-file: recipe.yml
+    - from-file: all-common.yml
+    - from-file: gnome-common.yml

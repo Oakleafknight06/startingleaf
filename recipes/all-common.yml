@@ -1,0 +1,38 @@
+  # Copies files from the repo into the image
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  # Signs image with sigstore
+  - type: signing
+
+  # Installs chezmoi and automatically imports dotfiles
+  - type: chezmoi
+    repository: "https://github.com/oakleafknight06/dotfiles"
+    
+   - type: systemd
+    system:
+      enabled:
+        - tailscaled
+        - mullvad-daemon
+ 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - IntelOneMono
+        - JetBrainsMono
+      google-fonts:
+        - Roboto
+
+  - type: rpm-ostree
+    repos:
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    install:
+      - tailscale # Effortless networking - "Virtual LAN" wireguard service
+      - fish # Fish shell. Not set as login, executed with terminal emulator
+      - sg3_utils # Enables Apple SuperDrive udev rule
+      - ibus-rime # Better Chiense input
+      - mullvad-vpn # Circumvent network censorship
+
