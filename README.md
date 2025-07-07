@@ -12,7 +12,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 - MoreWaita and Adw-GTK3 for consistent Gnome look
 - Tailscale for easy networking
 - Mullvad VPN
-- Dotfiles slipped in with Chezmoi
+- [Dotfiles](https://github.com/oakleafknight06/dotfiles) with Chezmoi
 - Brew for cli apps, with Brewfile in dotifles for semi-declarative management
 - Fish as interactive shell (set through terminal emulator settings)
 - Gnome configuration through gschema rules
