@@ -27,28 +27,22 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Installation
 
 > [!Warning]
-> This is my personal image, which I manage for myself. You may copy from or use this repo, but I provide **no** support or guarantee of functionality.
+> This is my personal image, which I manage for myself. You may copy from this repo or use these images, but I provide **no** support or guarantee of functionality.
 
-To rebase an existing Silverblue/Kinoite installation to the latest build:
+This repository currently builds two images, `startingleaf` and `startingleaf-nvidia-open`.
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/oakleafknight06/startingleaf:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-This repository builds date tags as well, so if you want to rebase to a particular day's build:
-```
-rpm-ostree reb-ase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:20250403
-```
+1. Install secureblue
+2. Modify `/etc/containers/policy.json` to accept this image, by adding a section like so:
+   ```
+    "ghcr.io/oakleafknight06/startingleaf": [
+          {
+          "type": "insecureAcceptAnything"
+          }
+      ],
+   ```
+   
+3. Rebase onto the custom image like so:
+   ```
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:latest
+   ```
+4. Reboot into the custom image
