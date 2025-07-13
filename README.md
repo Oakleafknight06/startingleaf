@@ -19,7 +19,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
     - Tiling Assistant extension
     - Gnome-Classic session removed
     - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
-- Trivalent browser (https://github.com/secureblue/trivalent)
+- [Trivalent](https://github.com/secureblue/trivalent) web browser
 - ADB and fastboot for Android
 - Better Chinese input with Rime
 
