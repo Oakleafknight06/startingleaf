@@ -32,6 +32,7 @@ modules:
       - ibus-rime # Better Chiense input
       - mullvad-vpn # Circumvent network censorship
       - android-tools
+      - syncthing
 
   - type: systemd
     system:
