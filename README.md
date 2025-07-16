@@ -22,6 +22,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 - [Trivalent](https://github.com/secureblue/trivalent) web browser
 - ADB and fastboot for Android
 - Better Chinese input with Rime
+- Syncthing to .. you know .. sync things
 
 
 ## Installation
