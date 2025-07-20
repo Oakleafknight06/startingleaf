@@ -25,14 +25,16 @@ modules:
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
+      - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-%OS_VERSION%/zeno-scrcpy-fedora-%OS_VERSION%.repo
     install:
       - tailscale # Effortless networking - "Virtual LAN" wireguard service
       - fish # Fish shell. Not set as login, executed with terminal emulator
       - sg3_utils # Enables Apple SuperDrive udev rule
       - ibus-rime # Better Chiense input
       - mullvad-vpn # Circumvent network censorship
-      - android-tools
-      - syncthing
+      - android-tools # ADB and fastboot
+      - scrcpy # Android screen mirroring
+      - syncthing # For syncing things
 
   - type: systemd
     system:
