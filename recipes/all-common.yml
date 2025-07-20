@@ -26,6 +26,7 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-%OS_VERSION%/zeno-scrcpy-fedora-%OS_VERSION%.repo
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm # Needed for MPD
     install:
       - tailscale # Effortless networking - "Virtual LAN" wireguard service
       - fish # Fish shell. Not set as login, executed with terminal emulator
@@ -35,6 +36,7 @@ modules:
       - android-tools # ADB and fastboot
       - scrcpy # Android screen mirroring
       - syncthing # For syncing things
+      - mpd # For Euphonica music player
 
   - type: systemd
     system:
