@@ -23,6 +23,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 - ADB and fastboot for Android
 - Better Chinese input with Rime
 - Syncthing to .. you know .. sync things
+- *INCOMPLETE*: MPD for media playback with [Euphonica](https://github.com/htkhiem/euphonica)
 
 
 ## Installation
