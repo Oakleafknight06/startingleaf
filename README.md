@@ -27,6 +27,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Incomplete/Incoming features
 - MPD for media playback with [Euphonica](https://github.com/htkhiem/euphonica)
 - Yubico Authenticator
+- Add [Landrun](https://github.com/Zouuup/landrun)
 
 
 
