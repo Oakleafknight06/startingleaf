@@ -20,7 +20,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
     - Gnome-Classic session removed
     - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
 - [Trivalent](https://github.com/secureblue/trivalent) web browser
-- ADB and fastboot for Android
+- ADB, Fastboot, and scrcpy for Android devices
 - Better Chinese input with Rime
 - Syncthing to .. you know .. sync things
 
