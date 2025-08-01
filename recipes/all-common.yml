@@ -43,3 +43,8 @@ modules:
       enabled:
         - tailscaled
         - mullvad-daemon
+
+  - type: script
+    scripts:
+      - landrun-install.sh
+
