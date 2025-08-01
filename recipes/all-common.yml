@@ -37,6 +37,7 @@ modules:
       - scrcpy # Android screen mirroring
       - syncthing # For syncing things
       #- mpd # For Euphonica music player
+      - golang # To build Landrun
 
   - type: systemd
     system:
