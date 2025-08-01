@@ -1,33 +1,35 @@
 # Startingleaf
-_Atomic Desktop built on Fedora and Secureblue with BlueBuild_
+_A bootable container desktop built on Fedora Atomic and Secureblue with BlueBuild_
 
 [![bluebuild](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml/badge.svg)](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml)
 
-For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://secureblue.dev) websites
+For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://secureblue.dev) websites.
 
 ## Feature List
 - Apple SuperDrive udev rule (requires sg3_utils package)
     - Rule from this [gist](https://gist.github.com/yookoala/818c1ff057e3d965980b7fd3bf8f77a6) by @yookoala
 - Intel One Mono, Adwaita Mono, and JetBrains Mono nerd fonts plus Roboto Google font installed
 - MoreWaita and Adw-GTK3 for consistent Gnome look
-- Tailscale for easy networking
-- Mullvad VPN
+- [Tailscale](https://tailscale.com) for easy networking
+- [Mullvad](https://mullvad.net) VPN
 - [Dotfiles](https://github.com/oakleafknight06/dotfiles) with Chezmoi
-- Brew for cli apps, with Brewfile in dotifles for semi-declarative management
-- Fish as interactive shell (set through terminal emulator settings)
+- [Brew](https://brew.sh) for cli apps, with Brewfile in dotifles for semi-declarative management
+- [Fish](https://fishshell.com) as interactive shell (set through terminal emulator settings)
 - Gnome configuration through gschema rules
     - Tiling Assistant extension
     - Gnome-Classic session removed
     - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
 - [Trivalent](https://github.com/secureblue/trivalent) web browser
-- ADB, Fastboot, and scrcpy for Android devices
-- Better Chinese input with Rime
-- Syncthing to .. you know .. sync things
+- ADB, Fastboot, and [scrcpy](https://github.com/Genymobile/scrcpy) for Android devices
+- Better Chinese input with [Rime](https://rime.im)
+- [Syncthing](https://syncthing.net) to .. you know .. sync things
+- [Landrun](https://github.com/Zouuup/landrun)
 
-## Incomplete/Incoming features
+### Incomplete or Incoming Features
 - MPD for media playback with [Euphonica](https://github.com/htkhiem/euphonica)
 - Yubico Authenticator
-- Add [Landrun](https://github.com/Zouuup/landrun)
+- [Dangerzone](https://dangerzone.rocks/)
+
 
 
 
