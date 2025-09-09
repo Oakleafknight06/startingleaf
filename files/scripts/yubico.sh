@@ -3,12 +3,16 @@
 # Tell this script to exit if there are any errors.
 set -oue pipefail
 
+echo "Installing Yubico Authenticator"
 # Get yubico authenticator from here https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz and uncompress it
+echo "Downloading the tar"
 mkdir /tmp/yubico
-wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz /tmp/yubico
+wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz /tmp/yubico/
+echo "untar-ing"
 tar -xzvf /tmp/yubico/yubico-authenticator-latest-linux.tar.gz
 
 # Move the .desktop file to the right place
+echo "Moving files..."
 mv /tmp/yubico/yubico-authenticator-latest-linux/linux_support/com.yubico.yubioath.desktop /usr/share/applications/
 
 # Not sure if the icon will work this way
