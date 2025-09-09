@@ -48,4 +48,5 @@ modules:
   - type: script
     scripts:
       - landrun-install.sh
+      - yubico.sh
 
