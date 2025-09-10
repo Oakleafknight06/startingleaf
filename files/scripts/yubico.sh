@@ -12,6 +12,7 @@ wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticato
 echo "untar-ing"
 tar -xzvf yubico-authenticator-latest-linux.tar.gz
 ls /tmp/yubico
+mv yubico-authenticator-*/ yubico-authenticator-latest-linux/
 
 # Move the .desktop file to the right place
 echo "Moving desktop file into place.."
