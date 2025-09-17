@@ -28,7 +28,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ### Incomplete or Incoming Features
 - MPD for media playback with [Euphonica](https://github.com/htkhiem/euphonica)
     - Currently running MPD in distrobox container. Should setup in `distrobox.ini`
-- Yubico Authenticator (WIP install script. Maybe package as RPM?)
+- Yubico Authenticator (Installed, but desktop file is incorrect)
 - [Dangerzone](https://dangerzone.rocks/)
 - Syncthing systemd service (See https://docs.syncthing.net/users/autostart.html#linux)
 
