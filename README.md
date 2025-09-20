@@ -24,12 +24,12 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 - Better Chinese input with [Rime](https://rime.im)
 - [Syncthing](https://syncthing.net) to .. you know .. sync things
 - [Landrun](https://github.com/Zouuup/landrun)
-- [Dangerzone](https://dangerzone.rocks/) to safely read potentially dangerous documents
+- Yubico Authenticator
 
 ### Incomplete or Incoming Features
 - MPD for media playback with [Euphonica](https://github.com/htkhiem/euphonica)
     - Currently running MPD in distrobox container. Should setup in `distrobox.ini`
-- Yubico Authenticator (Installed, but desktop file is incorrect)
+- [Dangerzone](https://dangerzone.rocks/) to safely read potentially dangerous documents. (Container policy prevents it from running.)
 - Syncthing systemd service (See https://docs.syncthing.net/users/autostart.html#linux)
 
 
