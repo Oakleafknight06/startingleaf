@@ -8,7 +8,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Feature List
 - Apple SuperDrive udev rule (requires sg3_utils package)
     - Rule from this [gist](https://gist.github.com/yookoala/818c1ff057e3d965980b7fd3bf8f77a6) by @yookoala
-- Intel One Mono, Adwaita Mono, and JetBrains Mono nerd fonts plus Roboto Google font installed
+- Intel One Mono, Adwaita Mono, and JetBrains Mono nerd fonts and Roboto Google font installed
 - MoreWaita and Adw-GTK3 for consistent Gnome look
 - [Tailscale](https://tailscale.com) for easy networking
 - [Mullvad](https://mullvad.net) VPN
@@ -16,7 +16,7 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 - [Brew](https://brew.sh) for cli apps, with Brewfile in dotifles for semi-declarative management
 - [Fish](https://fishshell.com) as interactive shell (set through terminal emulator settings)
 - Gnome configuration through gschema rules
-    - Tiling Assistant extension
+    - [Tiling Assistant](https://github.com/Leleat/Tiling-Assistant) extension
     - Gnome-Classic session removed
     - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
 - [Trivalent](https://github.com/secureblue/trivalent) web browser
