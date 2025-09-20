@@ -16,10 +16,11 @@ mv yubico-authenticator-*/ yubico-authenticator-latest-linux/
 
 # Move the .desktop file to the right place
 echo "Moving desktop file into place.."
-mv yubico-authenticator-latest-linux/linux_support/com.yubico.yubioath.desktop /usr/share/applications/
+mv /tmp/com.yubico.yubioath.desktop /usr/share/applications/
 
-# Not sure if the icon will work this way
-# mv /tmp/yubico/yubico-authenticator-latest-linux/linux_support/com.yubico.yubioath.png /usr/share/icons
+# Move icon
+echo "Moving icon into place.."
+mv /tmp/yubico/yubico-authenticator-latest-linux/linux_support/com.yubico.yubioath.png /usr/share/icons
 
 # Move the executable and other stuff to the proper directories
 # "authenticator" is the binary, "data" "helper" "lib" directories required. Not sure where they go though. Can one have folders in /usr/bin?
