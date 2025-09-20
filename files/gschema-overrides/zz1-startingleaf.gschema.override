@@ -7,6 +7,7 @@ close=['<Alt><Super>q']
 cycle-windows=['<Super>r']
 cycle-windows-backward=['<Super><Shift>r']
 minimize=['']
+toggle-fullscreen=['<Super>g']
 move-to-monitor-left=['<Alt><Super>w']
 move-to-monitor-right=['<Alt><Super>e']
 switch-to-workspace-left=['<Super>i']
@@ -24,7 +25,7 @@ home=['<Super>f']
 www=['<Super>b']
 screensaver=['<Alt><Super>Escape']
 
-# Themeing and misc desktop tweaks
+# Theming and misc desktop tweaks
 [org.gnome.desktop.interface]
 icon-theme='MoreWaita'
 gtk-theme='adw-gtk3-dark'
@@ -33,15 +34,16 @@ show-battery-percentage=true
 color-scheme='prefer-dark'
 enable-hot-corners=false
 
+# Terminal
+[org.gnome.Ptyxis]
+font-name=['AdwaitaMono Nerd Font 14']
+
 # Nautilus Config
-#[org.gtk.gtk4.settings.file-chooser]
-#sort-directories-first=true
+[org.gtk.gtk4.settings.file-chooser]
+sort-directories-first=true
 
-#[org.gnome.nautilus.list-view]
-#use-tree-view=true
-
-#[org.gnome.nautilus.preferences]
-#click-policy='single'
+[org.gnome.nautilus.list-view]
+use-tree-view=true
 
 # I/O on switches
 [org.gnome.desktop.a11y.interface]
@@ -52,20 +54,26 @@ show-status-shapes=true
 disable-user-extensions=false
 enabled-extensions = ['tiling-assistant@leleat-on-github', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
 
-##### BELOW IS POTENTIALLY BROKEN AND UNRELIABLE #####
+# Privacy settings
+[org.gnome.desktop.privacy]
+recent-files-max-age=30
+remove-old-trash-files=true
+remove-old-temp-files=true
+
+##### BELOW ARE EXPERIMENTAL AND HAVE BEEN KNOWN TO CAUSE ISSUES #####
+
+# Input
+[org.gnome.desktop.input-sources]
+sources=[('ibus', 'rime'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('ibus', 'rime')]
 
 # Gnome Search
-# May not work?
-#[org.gnome.desktop.search-providers]
-#sort-order=['org.gnome.Settings.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calendar.desktop']
-#enabled=['org.gnome.Contacts.desktop']
+[org.gnome.desktop.search-providers]
+enabled=['org.gnome.Calculator.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calendar.desktop', 'page.kramo.Cartridges.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop']
+sort-order=['org.gnome.Calculator.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Calendar.desktop', 'page.kramo.Cartridges.desktop']
 
 # Custom launch terminal keybind
-# Adds an empty entry but does not populate with the keybinding
-#[org.gnome.settings-daemon.plugins.media-keys]
-#custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
-
-#[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
-#binding='<Super>t'
-#command='ptyxis -s'
-#name='Launch Terminal'
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
+binding='<Super>t'
+command='ptyxis --new-window'
+name='Launch Terminal'
