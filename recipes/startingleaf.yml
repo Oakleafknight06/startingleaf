@@ -5,6 +5,7 @@ description: Custom operating system image based on Secureblue and Fedora Atomic
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-hardened
 image-version: latest
+#image-version: br-next-43
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
