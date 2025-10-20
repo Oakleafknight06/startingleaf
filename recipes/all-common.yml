@@ -16,8 +16,8 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - IntelOneMono
-        - JetBrainsMono
+        - ComicShaansMono
+        - AdwaitaMono
       google-fonts:
         - Roboto
 
