@@ -16,7 +16,7 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - ComicShaansMono
+        # - ComicShaansMono
         - AdwaitaMono
       google-fonts:
         - Roboto
