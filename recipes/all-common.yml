@@ -38,6 +38,7 @@ modules:
       - syncthing # For syncing things
       - golang # To build Landrun
       - dangerzone # Converts dangerous documents to safe pdf
+      - showmethekey
 
   - type: systemd
     system:
