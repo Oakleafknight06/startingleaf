@@ -27,6 +27,7 @@ modules:
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-%OS_VERSION%/zeno-scrcpy-fedora-%OS_VERSION%.repo
       - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
+      - https://copr.fedorainfracloud.org/coprs/pesader/showmethekey/repo/fedora-%OS_VERSION%/pesader-showmethekey-fedora-%OS_VERSION%.repo
     install:
       - tailscale # Effortless networking - "Virtual LAN" wireguard service
       - fish # Fish shell. Not set as login, executed with terminal emulator
@@ -38,7 +39,7 @@ modules:
       - syncthing # For syncing things
       - golang # To build Landrun
       - dangerzone # Converts dangerous documents to safe pdf
-      - showmethekey
+      - showmethekey # Keyboard diagnostics
 
   - type: systemd
     system:
@@ -49,5 +50,5 @@ modules:
   - type: script
     scripts:
       - landrun-install.sh
-      - yubico.sh
+      - yubico.sh # Yubico desktop app
 
