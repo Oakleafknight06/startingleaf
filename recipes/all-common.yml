@@ -29,9 +29,9 @@ modules:
         - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
       copr:
         - name: zeno/scrcpy
-          chroot: fedora-%OS_VERSION%-x86_64
+          chroot: fedora-43-x86_64
         - name: pesader/showmethekey
-          chroot: fedora-%OS_VERSION%-x86_64
+          chroot: fedora-43-x86_64
     install:
       packages:
         - tailscale # Effortless networking - "Virtual LAN" wireguard service
