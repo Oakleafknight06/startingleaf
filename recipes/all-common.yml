@@ -49,6 +49,6 @@ modules:
 
   - type: script
     scripts:
-      - landrun-install.sh
+      - landrun-install.sh # Installs landrun tool
       - yubico.sh # Yubico desktop app
 
