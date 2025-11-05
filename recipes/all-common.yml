@@ -26,7 +26,7 @@ modules:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
-        - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
+        # - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
       copr:
         - name: zeno/scrcpy
           chroot: fedora-43-x86_64
@@ -43,7 +43,7 @@ modules:
         - scrcpy # Android screen mirroring
         - syncthing # For syncing things
         - golang # To build Landrun
-        - dangerzone # Converts dangerous documents to safe pdf
+        # - dangerzone # Converts dangerous documents to safe pdf
         - showmethekey # Keyboard diagnostics
 
   - type: systemd
