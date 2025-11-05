@@ -30,7 +30,8 @@ modules:
       copr:
         - zeno/scrcpy
         - pesader/showmethekey
-      install:
+    install:
+      packages:
         - tailscale # Effortless networking - "Virtual LAN" wireguard service
         - fish # Fish shell. Not set as login, executed with terminal emulator
         - sg3_utils # Enables Apple SuperDrive udev rule
