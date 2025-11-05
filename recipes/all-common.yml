@@ -28,8 +28,10 @@ modules:
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
         - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
       copr:
-        - zeno/scrcpy
-        - pesader/showmethekey
+        - name: zeno/scrcpy
+          chroot: fedora-%OS_VERSION%-x86_64
+        - name: pesader/showmethekey
+          chroot: fedora-%OS_VERSION%-x86_64
     install:
       packages:
         - tailscale # Effortless networking - "Virtual LAN" wireguard service
