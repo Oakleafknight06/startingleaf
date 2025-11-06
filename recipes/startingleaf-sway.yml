@@ -1,5 +1,5 @@
 # image is published to ghcr.io/<user>/<name>
-name: startingleaf
+name: startingleaf-sway
 # description will be included in the image's metadata
 description: Custom operating system image based on Secureblue and Fedora Atomic Desktops, built with BlueBuild. 
 # the base image to build on top of (FROM) and the version tag to use
