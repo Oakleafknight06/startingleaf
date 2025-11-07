@@ -1,4 +1,5 @@
 modules:
+
   # Copies files from the repo into the image
   - type: files
     files:
@@ -16,17 +17,15 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - AdwaitaMono
         - ComicShannsMono
-      google-fonts:
-        - Roboto
 
+  # Installs and removes packages
   - type: dnf
     repos:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
-        # - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
+        - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
       copr:
         - name: zeno/scrcpy
           chroot: fedora-43-x86_64
@@ -43,17 +42,19 @@ modules:
         - scrcpy # Android screen mirroring
         - syncthing # For syncing things
         - golang # To build Landrun
-        # - dangerzone # Converts dangerous documents to safe pdf
+        - dangerzone # Converts dangerous documents to safe pdf
         - showmethekey # Keyboard diagnostics
 
+  # Sets up systemd services installed from packages in the dnf module
   - type: systemd
     system:
       enabled:
         - tailscaled
         - mullvad-daemon
 
+  # Runs scripts from the scripts folder
   - type: script
     scripts:
-      - landrun-install.sh # Installs landrun tool
-      - yubico.sh # Yubico desktop app
+      - landrun-install.sh # Installs landrun; landlock cli 
+      - yubico.sh # Installs Yubico desktop app
 

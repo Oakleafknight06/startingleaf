@@ -1,30 +1,39 @@
-# Gnome Configuration and Tweaking
+# GNOME Configuration and Tweaking
 modules:
+
+  # Installs fonts
   - type: fonts
     fonts:
       nerd-fonts:
         - AdwaitaMono
-      
+  
+  # Installs GNOME extensions from extensions.gnome.org
   - type: gnome-extensions
     install:
      - Tiling Assistant
 
-  - type: gschema-overrides # test & compile override files in config/gschema-overrides/
+  # Tests & compiles override files from gschema-overrides folder
+  - type: gschema-overrides
     include:
       - zz1-startingleaf.gschema.override
       - zz1-tilingassistant.gschema.override
-  
-  - type: rpm-ostree
+ 
+  # Installs and removes packages
+  - type: dnf 
     repos:
-      - https://copr.fedorainfracloud.org/coprs/trixieua/morewaita-icon-theme/repo/fedora-%OS_VERSION%/trixieua-morewaita-icon-theme-fedora-%OS_VERSION%.repo
+      copr:
+        - name: trixieua/morewaita-icon-theme
+          chroot: fedora-43-x86_64
     install:
-      - morewaita-icon-theme # Icon theme that adds icons for additional mimetypes and folders, as well as adwaita-style icons for third-party apps.
-      - adw-gtk3-theme # Consistent styling for GTK3 apps
+      packages:
+        - morewaita-icon-theme # Icon theme that adds icons for additional mimetypes and folders, as well as adwaita-style icons for third-party apps.
+        - adw-gtk3-theme # Consistent styling for GTK3 apps
+    # Unneeded / legacy GNOME apps removed. TODO: check if some of these entries are redundant with upstream.
     remove:
-      # Unneeded / legacy GNOME apps removed
-      - gnome-system-monitor
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-window-list
-      - gnome-classic-session 
-      - gnome-tweaks
-      - gnome-software
+      packages:
+        - gnome-system-monitor
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-window-list
+        - gnome-classic-session 
+        - gnome-tweaks
+        - gnome-software
