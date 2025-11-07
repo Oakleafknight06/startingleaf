@@ -8,23 +8,24 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Feature List
 - Apple SuperDrive udev rule (requires sg3_utils package)
     - Rule from this [gist](https://gist.github.com/yookoala/818c1ff057e3d965980b7fd3bf8f77a6) by @yookoala
-- Intel One Mono, Adwaita Mono, and JetBrains Mono nerd fonts and Roboto Google font installed
+- Nerd fonts
 - MoreWaita and Adw-GTK3 for consistent Gnome look
 - [Tailscale](https://tailscale.com) for easy networking
 - [Mullvad](https://mullvad.net) VPN
 - [Dotfiles](https://github.com/oakleafknight06/dotfiles) with Chezmoi
 - [Brew](https://brew.sh) for cli apps, with Brewfile in dotifles for semi-declarative management
 - [Fish](https://fishshell.com) as interactive shell (set through terminal emulator settings)
-- Gnome configuration through gschema rules
+- Gnome configuration
     - [Tiling Assistant](https://github.com/Leleat/Tiling-Assistant) extension
     - Gnome-Classic session removed
     - Gnome system monitor, Gnome Software, and Gnome Tweaks removed
+    - Keyboard shortcuts and system settings defined through gschema overrides
 - [Trivalent](https://github.com/secureblue/trivalent) web browser
 - ADB, Fastboot, and [scrcpy](https://github.com/Genymobile/scrcpy) for Android devices
 - Better Chinese input with [Rime](https://rime.im)
 - [Syncthing](https://syncthing.net) to .. you know .. sync things
 - [Landrun](https://github.com/Zouuup/landrun)
-- Yubico Authenticator
+- Yubico Authenticator desktop app
 
 ### Incomplete or Incoming Features
 - MPD for media playback with [Euphonica](https://github.com/htkhiem/euphonica)
@@ -38,9 +39,9 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ## Installation
 
 > [!Warning]
-> This is my personal image, which I manage for myself. You may copy from this repo or use these images, but I provide **no** support or guarantee of functionality.
+> This is my personal image, which I manage for myself. You may copy from this repo or use these images, but I will not provide any support or guarantee of functionality.
 
-This repository currently builds two images, `startingleaf` and `startingleaf-nvidia-open`.
+This repository currently builds two images, `startingleaf` and `startingleaf-sway`.
 
 1. Install secureblue
 2. Modify `/etc/containers/policy.json` to accept this image, by adding a section like so:
