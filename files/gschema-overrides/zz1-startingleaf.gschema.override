@@ -28,11 +28,12 @@ screensaver=['<Alt><Super>Escape']
 # Theming and misc desktop tweaks
 [org.gnome.desktop.interface]
 icon-theme='MoreWaita'
-gtk-theme='adw-gtk3-dark'
+gtk-theme='adw-gtk3'
 gtk-enable-primary-paste=false
 show-battery-percentage=true
 color-scheme='prefer-dark'
 enable-hot-corners=false
+monospace-font-name="AdwaitaMono Nerd Font 14"
 
 # Nautilus Config
 [org.gtk.gtk4.settings.file-chooser]
@@ -49,6 +50,7 @@ show-status-shapes=true
 [org.gnome.shell]
 disable-user-extensions=false
 enabled-extensions = ['tiling-assistant@leleat-on-github', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
+favorite-apps = ['trivalent.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'com.github.tchx84.Flatseal.desktop']
 
 # Privacy settings
 [org.gnome.desktop.privacy]
@@ -57,10 +59,6 @@ remove-old-trash-files=true
 remove-old-temp-files=true
 
 ##### BELOW ARE EXPERIMENTAL AND HAVE BEEN KNOWN TO CAUSE ISSUES #####
-
-# Terminal
-#[org.gnome.Ptyxis]
-#font-name=['AdwaitaMono Nerd Font 14']
 
 # Input
 [org.gnome.desktop.input-sources]
