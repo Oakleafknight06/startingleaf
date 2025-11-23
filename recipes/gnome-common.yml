@@ -17,7 +17,12 @@ modules:
     include:
       - zz1-startingleaf.gschema.override
       - zz1-tilingassistant.gschema.override
- 
+
+  # Runs scripts
+  - type: script
+    scripts:
+      - app-grid-folders.sh
+    
   # Installs and removes packages
   - type: dnf 
     repos:
