@@ -21,7 +21,7 @@ modules:
   # Runs scripts
   - type: script
     scripts:
-      - app-grid-folders.sh
+      # - app-grid-folders.sh
     
   # Installs and removes packages
   - type: dnf 
