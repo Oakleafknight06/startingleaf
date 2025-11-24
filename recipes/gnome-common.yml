@@ -18,10 +18,10 @@ modules:
       - zz1-startingleaf.gschema.override
       - zz1-tilingassistant.gschema.override
 
-  # Runs scripts
-  - type: script
-    scripts:
-      # - app-grid-folders.sh
+  # Runs scripts. this one makes gnome app grid folders, doesn't work in image. will redo as part of gschema overrides.
+  # - type: script
+  #   scripts:
+  #     - app-grid-folders.sh
     
   # Installs and removes packages
   - type: dnf 
