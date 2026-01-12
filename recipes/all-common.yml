@@ -25,6 +25,7 @@ modules:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
+        - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
         # - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
         # URL is truncated at build, and fails to install. Unsure of why
       copr:
@@ -45,6 +46,7 @@ modules:
         - golang # To build Landrun
         # - dangerzone # Converts dangerous documents to safe pdf
         - showmethekey # Keyboard diagnostics
+        - vagrant
 
   # Sets up systemd services installed from packages in the dnf module
   - type: systemd
