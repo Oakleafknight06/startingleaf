@@ -18,6 +18,7 @@ modules:
     fonts:
       nerd-fonts:
         - ComicShannsMono
+        - AdwaitaMono
 
   # Installs and removes packages
   - type: dnf
@@ -26,12 +27,8 @@ modules:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
         - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
-        # - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo
-        # URL is truncated at build, and fails to install. Unsure of why
       copr:
         - name: zeno/scrcpy
-          chroot: fedora-43-x86_64
-        - name: pesader/showmethekey
           chroot: fedora-43-x86_64
     install:
       packages:
@@ -44,9 +41,7 @@ modules:
         - scrcpy # Android screen mirroring
         - syncthing # For syncing things
         - golang # To build Landrun
-        # - dangerzone # Converts dangerous documents to safe pdf
-        - showmethekey # Keyboard diagnostics
-        - vagrant
+        - vagrant # For vm provision
 
   # Sets up systemd services installed from packages in the dnf module
   - type: systemd
