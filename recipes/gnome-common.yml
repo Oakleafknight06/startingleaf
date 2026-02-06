@@ -41,4 +41,3 @@ modules:
         - gnome-shell-extension-window-list
         - gnome-classic-session 
         - gnome-tweaks
-        - gnome-software
