@@ -11,6 +11,7 @@ modules:
   - type: gnome-extensions
     install:
      - Tiling Assistant
+     - Tiling Shell
 
   # Tests & compiles override files from gschema-overrides folder
   - type: gschema-overrides
