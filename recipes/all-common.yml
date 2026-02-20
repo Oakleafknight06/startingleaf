@@ -41,7 +41,6 @@ modules:
         - scrcpy # Android screen mirroring
         - syncthing # For syncing things
         - golang # To build Landrun
-        - vagrant # For vm provision
 
   # Sets up systemd services installed from packages in the dnf module
   - type: systemd
