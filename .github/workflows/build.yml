@@ -58,6 +58,6 @@ jobs:
     with:
       image: ${{ needs.bluebuild.outputs.FULL_IMAGE_REF }}
       digest: ${{ needs.bluebuild.outputs.IMAGE_DIGEST }}
-      # registry-username: ${{ github.actor }}
-    # secrets:
-      # registry-password: ${{ secrets.GITHUB_TOKEN }}
+      registry-username: ${{ github.actor }}
+    secrets:
+      registry-password: ${{ secrets.GITHUB_TOKEN }}
