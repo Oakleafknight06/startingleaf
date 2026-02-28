@@ -1,0 +1,63 @@
+name: bluebuild
+on:
+  schedule:
+    - cron: "00 6 * * *" # build at 06:00 UTC every day 
+  push:
+    paths-ignore: # don't rebuild if only documentation has changed
+      - "**.md"
+  pull_request:
+  workflow_dispatch: # allow manually triggering builds
+jobs:
+  bluebuild:
+    name: Build Custom Image
+    runs-on: ubuntu-latest
+    outputs:
+      FULL_IMAGE_REF: ${{ steps.runner_setup.outputs.FULL_IMAGE_REF }}
+      IMAGE_DIGEST: ${{ steps.image_manifest_metadata.outputs.IMAGE_DIGEST }}
+    permissions:
+      contents: read # Needed to pull the repo for the build
+      actions: read # Needed to read actions and actions logs for provenance generation
+      packages: write # Needed to publish images
+      id-token: write # Needed for token generation for signing
+    strategy:
+      fail-fast: false # Stops GitHub from cancelling all matrix builds if one fails
+      matrix:
+        recipe:
+          - startingleaf.yml
+          # - startingleaf-sway.yml
+    steps:
+       # the build is fully handled by the reusable github action
+      - name: Build Startingleaf 
+        uses: blue-build/github-action@v1.11.0
+        with:
+          recipe: ${{ matrix.recipe }}
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}
+          build_chunked_oci: true
+
+      - name: Install regctl
+        uses: regclient/actions/regctl-installer@1b705e32d40851370799ea5814e83d0a5f6a70dc # v0.1.0
+
+      - name: Parse image manifest
+        id: image_manifest_metadata
+        shell: bash
+        run: |
+          IMAGE_DIGEST=$(regctl image digest "ghcr.io/oakleafknight06/startingleaf:latest")
+          echo "IMAGE_DIGEST=${IMAGE_DIGEST}" >> "${GITHUB_OUTPUT}"
+
+  provenance:
+    needs: [bluebuild]
+    permissions:
+      actions: read # for detecting the Github Actions environment.
+      id-token: write # for creating OIDC tokens for signing.
+      packages: write # for uploading attestations.
+    # Currently this must be referenced by tag, not by hash:
+    # https://github.com/slsa-framework/slsa-github-generator?tab=readme-ov-file#referencing-slsa-builders-and-generators
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0
+    with:
+      image: ${{ needs.bluebuild.outputs.FULL_IMAGE_REF }}
+      digest: ${{ needs.bluebuild.outputs.IMAGE_DIGEST }}
+      registry-username: ${{ github.actor }}
+    secrets:
+      registry-password: ${{ secrets.GITHUB_TOKEN }}
