@@ -24,7 +24,7 @@ jobs:
       matrix:
         recipe:
           - startingleaf.yml
-          - startingleaf-sway.yml
+          # - startingleaf-sway.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Startingleaf 
@@ -43,7 +43,7 @@ jobs:
         id: image_manifest_metadata
         shell: bash
         run: |
-          IMAGE_DIGEST=$(regctl image digest "ghcr.io/secureblue/startingleaf:latest")
+          IMAGE_DIGEST=$(regctl image digest "ghcr.io/oakleafknight06/startingleaf:latest")
           echo "IMAGE_DIGEST=${IMAGE_DIGEST}" >> "${GITHUB_OUTPUT}"
 
   provenance:
