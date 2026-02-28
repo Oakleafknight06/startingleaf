@@ -42,15 +42,14 @@ jobs:
         run: |
           images=(
               startingleaf
-              startingleaf-sway
           )
 
           failed_images=0
           for image in "${images[@]}"; do
-            image_url="ghcr.io/secureblue/${image}:latest"
+            image_url="ghcr.io/oakleafknight06/${image}:latest"
             full_ref=$(crane digest --full-ref "${image_url}")
             echo "Verifying provenance for ${full_ref}..."
-            if ! slsa-verifier verify-image --source-uri 'github.com/secureblue/secureblue' --source-branch 'live' "${full_ref}"; then
+            if ! slsa-verifier verify-image --source-uri 'github.com/oakleafknight06/startingleaf' --source-branch 'main' "${full_ref}"; then
               failed_images=$(( failed_images + 1 ))
               echo "FAIL: Provenance verification failed for ${image}"
             fi
