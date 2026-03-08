@@ -30,28 +30,22 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ### Incomplete or Incoming Features
 - Syncthing systemd service (See https://docs.syncthing.net/users/autostart.html#linux)
 
+## Features required as a Secureblue downstream image
+### Implemented
+- Image name starts with `silverblue` for audit script compatibility
 
-
+### Incoming
+- Provenance verification
 
 ## Installation
-
 > [!Warning]
 > This is my personal image, which I manage for myself. You may copy from this repo or use these images, but I will not provide any support or guarantee of functionality.
 
-This repository currently builds two images, `startingleaf` and `startingleaf-sway`.
-
-1. Install secureblue
-2. Modify `/etc/containers/policy.json` to accept this image, by adding a section like so:
-   ```
-    "ghcr.io/oakleafknight06/startingleaf": [
-          {
-          "type": "insecureAcceptAnything"
-          }
-      ],
-   ```
-   
+1. [Install Secureblue](https://secureblue.dev/install)
+2. `run0 podman image trust set -t accept ghcr.io/oakleafknight06`
 3. Rebase onto the custom image like so:
    ```
-   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/oakleafknight06/startingleaf:latest
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/oakleafknight06/silverblue-startingleaf:latest
    ```
 4. Reboot into the custom image
+5. Reset container policy: `run0 cp /usr/etc/containers/policy.json /etc/containers/policy.json`
