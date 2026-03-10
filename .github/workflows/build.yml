@@ -74,7 +74,7 @@ jobs:
           echo "BASE_IMAGE=$(yq -r '."base-image"' "./recipes/${RECIPE}")" >> "${GITHUB_OUTPUT}"
           echo "BASE_IMAGE_VERSION=$(yq -r '."image-version"' "./recipes/${RECIPE}")" >> "${GITHUB_OUTPUT}"
 
-          FULL_IMAGE_REF="ghcr.io/oakleafknight06/silverblue-startingleaf:latest"
+          FULL_IMAGE_REF="ghcr.io/Oakleafknight06/silverblue-startingleaf:latest"
           echo "FULL_IMAGE_REF=${FULL_IMAGE_REF}" >> "${GITHUB_OUTPUT}"
 
       - name: Install slsa-verifier

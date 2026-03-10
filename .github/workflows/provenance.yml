@@ -17,7 +17,7 @@ concurrency:
 jobs:
   verify-provenance:
     name: Verify provenance
-    if: github.triggering_actor == 'oakleafknight06' || github.event_name == 'schedule'
+    if: github.triggering_actor == 'Oakleafknight06' || github.event_name == 'schedule'
     runs-on: ubuntu-slim
     permissions:
       packages: read # needed to pull images
@@ -46,10 +46,10 @@ jobs:
 
           failed_images=0
           for image in "${images[@]}"; do
-            image_url="ghcr.io/oakleafknight06/${image}:latest"
+            image_url="ghcr.io/Oakleafknight06/${image}:latest"
             full_ref=$(crane digest --full-ref "${image_url}")
             echo "Verifying provenance for ${full_ref}..."
-            if ! slsa-verifier verify-image --source-uri 'github.com/oakleafknight06/silverblue-startingleaf' --source-branch 'main' "${full_ref}"; then
+            if ! slsa-verifier verify-image --source-uri 'github.com/Oakleafknight06/silverblue-startingleaf' --source-branch 'main' "${full_ref}"; then
               failed_images=$(( failed_images + 1 ))
               echo "FAIL: Provenance verification failed for ${image}"
             fi
