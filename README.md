@@ -1,7 +1,9 @@
 # Startingleaf
 _A bootable container desktop built on Fedora Atomic and Secureblue with BlueBuild_
 
-[![bluebuild](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml/badge.svg)](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml)
+
+[![build](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml/badge.svg)](https://github.com/Oakleafknight06/startingleaf/actions/workflows/build.yml)
+[![provenance verification](https://github.com/Oakleafknight06/startingleaf/actions/workflows/provenance.yml/badge.svg)](https://github.com/Oakleafknight06/startingleaf/actions/workflows/provenance.yml)
 
 For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblue](https://secureblue.dev) websites.
 
