@@ -15,7 +15,7 @@ image_ref=$(rpm-ostree status --booted --json | jq -cr '.deployments[0]."contain
 image_ref=${image_ref#*:docker://}
 case "${image_ref}" in
     ghcr.io/oakleafknight06/*)
-        source_uri='github.com/oakleafknight06/startingleaf'
+        source_uri='github.com/Oakleafknight06/startingleaf'
         ;;
     *)
         echo "WARNING: Unknown image reference '${image_ref}'; unable to check provenance."
