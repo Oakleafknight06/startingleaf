@@ -161,8 +161,8 @@ jobs:
     # https://github.com/slsa-framework/slsa-github-generator?tab=readme-ov-file#referencing-slsa-builders-and-generators
     uses: slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0
     with:
-      image: ${{ needs.uil.outputs.FULL_IMAGE_REF }}
-      digest: ${{ needs.uil.outputs.IMAGE_DIGEST }}
+      image: ${{ needs.build.outputs.FULL_IMAGE_REF }}
+      digest: ${{ needs.build.outputs.IMAGE_DIGEST }}
       registry-username: ${{ github.actor }}
     secrets:
       registry-password: ${{ secrets.GITHUB_TOKEN }}
