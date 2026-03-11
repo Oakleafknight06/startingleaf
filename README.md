@@ -32,12 +32,9 @@ For more info, check out the [BlueBuild](https://blue-build.org/) and [Secureblu
 ### Incomplete or Incoming Features
 - Syncthing systemd service (See https://docs.syncthing.net/users/autostart.html#linux)
 
-## Features required as a Secureblue downstream image
-### Implemented
+### Features required as a Secureblue downstream image
 - Image name starts with `silverblue` for audit script compatibility
-
-### Incoming
-- Provenance verification
+- Provenance verification. See build scripts and `/usr/libexec/secureblue/verify-provenance.sh`
 
 ## Installation
 > [!Warning]
