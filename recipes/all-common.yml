@@ -26,7 +26,6 @@ modules:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
-        - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
       copr:
         - name: zeno/scrcpy
           chroot: fedora-43-x86_64
