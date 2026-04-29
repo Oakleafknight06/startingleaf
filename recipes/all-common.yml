@@ -37,7 +37,7 @@ modules:
         - ibus-rime # Better Chiense input
         - mullvad-vpn # Circumvent network censorship
         - android-tools # ADB and fastboot
-        - scrcpy # Android screen mirroring
+        #- scrcpy # Android screen mirroring
         - syncthing # For syncing things
         - golang # To build Landrun
         - piper # Mouse configuration
