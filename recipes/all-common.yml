@@ -42,6 +42,8 @@ modules:
         - golang # To build Landrun
         - piper # Mouse configuration
         - restic # Backups
+      exclude:
+        - fuse
 
   # Sets up systemd services installed from packages in the dnf module
   - type: systemd
