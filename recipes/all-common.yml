@@ -28,7 +28,7 @@ modules:
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
         - name: zeno/scrcpy
-          chroot: fedora-43-x86_64
+          chroot: fedora-44-x86_64
     install:
       packages:
         - tailscale # Effortless networking - "Virtual LAN" wireguard service
@@ -41,6 +41,7 @@ modules:
         - syncthing # For syncing things
         - golang # To build Landrun
         - piper # Mouse configuration
+        - restic # Backups
 
   # Sets up systemd services installed from packages in the dnf module
   - type: systemd
