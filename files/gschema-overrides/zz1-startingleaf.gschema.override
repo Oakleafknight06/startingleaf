@@ -17,8 +17,9 @@ switch-to-workspace-right=['<Super>o']
 switch-monitor=['']
 [org.gnome.mutter.wayland.keybindings]
 restore-shortcuts=['']
-[org.gnome.mutter]
-experimental-features=['scale-monitor-framebuffer']
+# comment out to let build
+# [org.gnome.mutter]
+# experimental-features=['scale-monitor-framebuffer']
 
 [org.gnome.settings-daemon.plugins.media-keys]
 home=['<Super>f']
